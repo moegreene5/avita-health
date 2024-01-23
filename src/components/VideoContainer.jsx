@@ -5,7 +5,7 @@ const VideoContainer = () => {
     <>
       <div className="sm:h-full md:h-full lg:h-1/2 relative overflow-hidden">
         <video
-          className="w-full h-full object-cover"
+          className="w-full h-full"
           preload="none"
           autoPlay
           loop
