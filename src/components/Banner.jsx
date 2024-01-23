@@ -1,5 +1,4 @@
 import banner from "../assets/pharmacy-banner.webp";
-import pharm from "../assets/pharm.jpg";
 
 const Banner = () => {
   return (
@@ -8,7 +7,9 @@ const Banner = () => {
       <div className="flex flex-col-reverse lg:hidden">
         <div style={{ background: "#275d38" }}>
           <div className="flex flex-col banner-sizing text-white justify-center items-center text-center">
-            <h2 className="font-black text-2xl mb-1">Avita Ontario Pharmacy</h2>
+            <h2 className="font-black text-2xl mt-6 mb-1">
+              Avita Ontario Pharmacy
+            </h2>
             <p className="text-2xl italic font-serif font-extralight mb-1">
               Check out our monthly sales &{" "}
               <span
