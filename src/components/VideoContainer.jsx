@@ -1,11 +1,12 @@
-import avitaHealth from "../assets/avitahealth.mp4";
+import avitaHealth from "../assets/avitahealth2.mp4";
 
 const VideoContainer = () => {
   return (
     <>
-      <div className="video-height relative overflow-hidden">
+      <div className="sm:h-full md:h-full lg:h-1/2 relative overflow-hidden">
         <video
           className="w-full h-full object-cover"
+          preload="none"
           autoPlay
           loop
           playsInline
