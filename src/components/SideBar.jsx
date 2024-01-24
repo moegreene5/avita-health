@@ -3,22 +3,8 @@ import { IoMdExit } from "react-icons/io";
 import { IoIosSearch } from "react-icons/io";
 
 const SideBar = ({ toggled, setToggle }) => {
-  const list = [
-    "FIND A DOCTOR",
-    "Locations",
-    "Services",
-    "CAREERS",
-    "CONTACT US",
-  ];
+  const list = ["HOME", "SERVICES", "MY PORTAL", "F.A.Q", "CONTACT US"];
 
-  const quickLinks = [
-    "About Us",
-    "Volunteer",
-    "MyChart",
-    "Health Library",
-    "Give Today",
-    "Your Bill",
-  ];
   return (
     <div
       style={{ backgroundColor: "rgba(128, 128, 128, 0.9)" }}
@@ -58,21 +44,6 @@ const SideBar = ({ toggled, setToggle }) => {
           </li>
         ))}
       </ul>
-      <div className="mt-6">
-        <h3 className="border-b-4 border-white p-1 text-2xl text-white">
-          QUICK LINKS
-        </h3>
-        <div className="grid grid-cols-2 py-5 px-3 pl-0">
-          {quickLinks.map((link, index) => (
-            <a
-              className="p-2 text-white hover:text-gray-400 hover:cursor-pointer hover:border-b-4 hover:border-white"
-              key={index}
-            >
-              {link}
-            </a>
-          ))}
-        </div>
-      </div>
     </div>
   );
 };

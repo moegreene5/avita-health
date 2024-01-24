@@ -97,7 +97,7 @@ const CarouselComponent = () => {
       <div className="pb-8">
         <div className="py-5 text-center">
           <h2
-            style={{ color: "#275d38", fontSize: "1.8rem", fontWeight: "bold" }}
+            style={{ color: "#004680", fontSize: "1.8rem", fontWeight: "bold" }}
           >
             <a className="hover:underline" href="">
               NEWS & EVENTS
@@ -109,7 +109,7 @@ const CarouselComponent = () => {
 
         <div className="" style={{ maxWidth: "90vw", margin: "0 auto" }}>
           <Slider
-            prevArrow={<GrPrevious color="#275d38" fontSize="1rem" />}
+            prevArrow={<GrPrevious color="#004680" fontSize="1rem" />}
             nextArrow={<GrNext color="#275d38" />}
             {...settings}
           >

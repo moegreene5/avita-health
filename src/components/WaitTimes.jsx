@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
-import { IoMdTime } from "react-icons/io";
+import {
+  MdOutlineHealthAndSafety,
+  MdOutlineMedicalServices,
+  MdPregnantWoman,
+} from "react-icons/md";
 
 const WaitTimes = () => {
   const [visible, setVisible] = useState(false);
@@ -13,8 +17,8 @@ const WaitTimes = () => {
         }}
       >
         <div className="flex justify-center">
-          <h2 className="text-white text-center sm:text-lg md:text-2xl">
-            Emergency Room Wait Times
+          <h2 className="text-white text-center sm:text-lg md:text-3xl lg:text-5xl">
+            Services
           </h2>
           <span
             onClick={() => setVisible(!visible)}
@@ -48,60 +52,45 @@ const WaitTimes = () => {
       </div>
 
       <div className="flex flex-col md:flex-row">
-        {/* bucyrus */}
+        {/* primary core */}
         <div className="bucyrus py-5 border-b-2 border-white md:border-b-0 md:w-1/3 md:border-r-2">
           <div className="flex flex-row md:flex-col flex-grow-0 flex-shrink justify-center items-center text-white text-sm md:text-lg lg:text-2xl text-shadow">
             <h3 className="mr-4">
               <a className="text-nowrap" href="">
-                BUCYRUS HOSPITAL
+                PRIMARY CARE
               </a>
             </h3>
             <p className="flex items-center">
               <span>
-                <IoMdTime size="2.4rem" />
-              </span>
-              <span className="text-center ml-2">
-                14
-                <br />
-                Minutes
+                <MdOutlineHealthAndSafety size="2.4rem" />
               </span>
             </p>
           </div>
         </div>
 
-        {/* gallion */}
+        {/* maternity women */}
         <div className="gallion py-5 border-b-2 border-white md:border-b-0 md:w-1/3 md:border-r-2">
           <div className="flex flex-row md:flex-col flex-grow-0 flex-shrink justify-center items-center text-white text-sm md:text-lg lg:text-2xl text-shadow">
             <h3 className="mr-4">
-              <a href="">GALLION HOSPITAL</a>
+              <a href="">MATERNITY WOMEN</a>
             </h3>
             <p className="flex items-center">
               <span>
-                <IoMdTime size="2.4rem" />
-              </span>
-              <span className="text-center ml-2">
-                8
-                <br />
-                Minutes
+                <MdPregnantWoman size="2.4rem" />
               </span>
             </p>
           </div>
         </div>
 
-        {/* ontario */}
+        {/* specialized consultation*/}
         <div className="ontario py-5 border-b border-white md:border-b-0 md:w-1/3">
           <div className="flex flex-row md:flex-col flex-grow-0 flex-shrink justify-center items-center text-white text-sm md:text-lg lg:text-2xl text-shadow">
             <h3 className="mr-4">
-              <a href="">ONTARIO HOSPITAL</a>
+              <a href="">SPECIALIZED CONSULTATION</a>
             </h3>
             <p className="flex items-center flex-shrink">
               <span>
-                <IoMdTime size="2.4rem" />
-              </span>
-              <span className="text-center ml-2">
-                11
-                <br />
-                Minutes
+                <MdOutlineMedicalServices size="2.4rem" />
               </span>
             </p>
           </div>

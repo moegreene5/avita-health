@@ -1,4 +1,4 @@
-import banner from "../assets/home-banner.webp";
+import banner from "../assets/blue-banner.jpeg";
 import foundation from "../assets/foundation-banner.webp";
 
 const HomeBanner = () => {
@@ -8,7 +8,7 @@ const HomeBanner = () => {
       <div className="lg:hidden relative text-center text-white">
         <img src={foundation} alt="" />
         <div
-          style={{ background: "#275d38" }}
+          style={{ background: "#004680" }}
           className="relative right-auto bottom-auto px-1 py-4 transform-none w-full"
         >
           <h2 className="mb-4 font-bold heading2-mobile">

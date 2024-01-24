@@ -1,9 +1,10 @@
 import avitaHealth from "../assets/avitahealth2.mp4";
+// import avita from "../assets/Avitahealth-Video.mp4";
 
 const VideoContainer = () => {
   return (
     <>
-      <div className="sm:h-full md:h-full lg:h-1/2 relative overflow-hidden">
+      <div className="video-height relative overflow-hidden">
         <video
           className="w-full h-full"
           preload="none"

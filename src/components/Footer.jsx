@@ -46,7 +46,7 @@ const Footer = () => {
 
   return (
     <div className="max-w-full">
-      <div className="green flex flex-col">
+      <div className="blue flex flex-col">
         <div className="p-0">
           <div className="flex justify-center items-center p-8 border-b-2 border-white w-4/5 mx-auto">
             <a href="/">

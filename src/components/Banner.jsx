@@ -5,11 +5,9 @@ const Banner = () => {
     <>
       {/* mobile */}
       <div className="flex flex-col-reverse lg:hidden">
-        <div style={{ background: "#275d38" }}>
+        <div style={{ background: "#004680" }}>
           <div className="flex flex-col banner-sizing text-white justify-center items-center text-center">
-            <h2 className="font-black text-2xl mt-6 mb-1">
-              Avita Ontario Pharmacy
-            </h2>
+            <h2 className="font-black text-2xl mt-6 mb-1">Avita Health</h2>
             <p className="text-2xl italic font-serif font-extralight mb-1">
               Check out our monthly sales &{" "}
               <span
@@ -39,11 +37,14 @@ const Banner = () => {
         <div className="flex h-96">
           <div
             className="w-1/2 h-full"
-            style={{ background: "#275d38", borderRight: "5px solid #a9c47f" }}
+            style={{
+              background: "#004680",
+              borderRight: "5px solid rgba(0, 102, 204, 0.5)",
+            }}
           >
             <div className="flex flex-col p-10 text-white justify-center items-center h-full">
               <h2 className="font-black text-3xl mb-6 text-center">
-                Avita Ontario Pharmacy
+                Avita Health
               </h2>
               <p className="text-2xl italic font-serif font-extralight mb-4 text-nowrap">
                 Check out our monthly sales &{" "}

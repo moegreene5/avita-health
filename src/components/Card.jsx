@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 const Card = ({ image, heading }) => {
   return (
     <div
@@ -14,7 +15,7 @@ const Card = ({ image, heading }) => {
           </a>
         </div>
         <div className="min-h-14 my-4 mx-2">
-          <h3 style={{ color: "#275438" }} className="text-lg font-bold">
+          <h3 style={{ color: "#004680" }} className="text-lg font-bold">
             <a className="hover:underline" href="/">
               {" "}
               {heading}

@@ -1,29 +1,29 @@
-import hands from "../assets/hand_icon-64.webp";
-import location from "../assets/location_icon-64.webp";
-import book from "../assets/BookIcon-64.webp";
-import stethescope from "../assets/stethescopeicon-64.webp";
+import doctor from "../assets/doctor.png";
+import dStethoscope from "../assets/doctorsStethoscope.png";
+import laboratory from "../assets/laboratory.png";
+import meter from "../assets/spectrophotometer.png";
 
 const HomeIcons = () => {
   const items = [
     {
-      icon: location,
-      heading: "LOCATION",
-      paragraph: "Find the nearest hospital or clinic",
+      icon: doctor,
+      heading: "TELEHEALTH SERVICES",
+      paragraph: "We offer the best TeleHealth Services",
     },
     {
-      icon: hands,
-      heading: "CLASSES & GROUPS",
-      paragraph: "Education for the community",
+      icon: meter,
+      heading: "DIAGNOSTIC IMAGING",
+      paragraph: "Accurate Diagnostic Imaging",
     },
     {
-      icon: stethescope,
-      heading: "SERVICES",
+      icon: dStethoscope,
+      heading: "MENTAL HEALTH & COUNSELING",
       paragraph: "Specialized care, close to home",
     },
     {
-      icon: book,
-      heading: "HEALTH LIBRARY",
-      paragraph: "A collection of health articles",
+      icon: laboratory,
+      heading: "LABORATORY TEST",
+      paragraph: "We offer Accurate Results",
     },
   ];
   return (
@@ -32,7 +32,7 @@ const HomeIcons = () => {
         {items.map((item, index) => (
           <div
             className="rounded-md p-6 hover-icons"
-            style={{ border: "3px solid #a9c47f" }}
+            style={{ border: "3px solid #004680" }}
             key={index}
           >
             <a

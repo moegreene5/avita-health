@@ -57,8 +57,8 @@
   }
 }
 
-.green {
-  background-image: url("../public/green_bg.jpg");
+.blue {
+  background-image: url("../public/blue.jpeg");
 }
 
 .bucyrus {
@@ -110,11 +110,11 @@
 }
 
 .hover-icon {
-  color: #275d38;
+  color: #004680;
 }
 
 .hover-icons:hover {
-  background: #275d38;
+  background: #004680;
   color: white;
 }
 
