@@ -17,7 +17,7 @@ const Banner = () => {
                 Hot Deals!
               </span>
             </p>
-            <button className="border-2 border-white rounded-md p-3 my-3 hover:bg-white hover:text-green-800">
+            <button className="border-2 border-white rounded-md p-3 my-3 hover:bg-white hover:text-blue-800">
               See This Month&apos;s Deals!
             </button>
           </div>
@@ -55,7 +55,7 @@ const Banner = () => {
                   Hot Deals!
                 </span>
               </p>
-              <button className="text-2xl border-2 border-white rounded-md p-3 my-3 hover:bg-white hover:text-green-800">
+              <button className="text-2xl border-2 border-white rounded-md p-3 my-3 hover:bg-white hover:text-blue-800">
                 See This Month&apos;s Deals!
               </button>
             </div>

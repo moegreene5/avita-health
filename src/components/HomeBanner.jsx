@@ -21,7 +21,7 @@ const HomeBanner = () => {
             communities.
           </p>
           <a
-            className="inline-block border-4 border-white rounded-lg bg-transparent px-4 py-1.5 text-lg hover:bg-white hover:text-green-900"
+            className="inline-block border-4 border-white rounded-lg bg-transparent px-4 py-1.5 text-lg hover:bg-white hover:text-blue-900"
             href="/"
           >
             <button>Donate Today!</button>
@@ -44,7 +44,7 @@ const HomeBanner = () => {
           </p>
           <a
             href="/"
-            className="inline-block border-4 border-white rounded-lg text-a text-padding bg-transparent hover:bg-white hover:text-green-900 mb-3"
+            className="inline-block border-4 border-white rounded-lg text-a text-padding bg-transparent hover:bg-white hover:text-blue-900 mb-3"
           >
             <button>Donate Today!</button>
           </a>

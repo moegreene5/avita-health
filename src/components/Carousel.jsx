@@ -109,8 +109,8 @@ const CarouselComponent = () => {
 
         <div className="" style={{ maxWidth: "90vw", margin: "0 auto" }}>
           <Slider
-            prevArrow={<GrPrevious color="#004680" fontSize="1rem" />}
-            nextArrow={<GrNext color="#275d38" />}
+            prevArrow={<GrPrevious color="#004680" fontSize="2rem" />}
+            nextArrow={<GrNext color="#275d38" fontSize="2rem" />}
             {...settings}
           >
             {items.map((item, index) => (

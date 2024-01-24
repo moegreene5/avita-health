@@ -89,7 +89,7 @@ const Footer = () => {
                 <ul className="footer-ul pl-0">
                   {item.links.map((link, index) => (
                     <li className="mb-1.5 pl-0" key={index}>
-                      <a className="hover:text-green-200" href="/">
+                      <a className="hover:text-blue-200" href="/">
                         {link}
                       </a>
                     </li>
