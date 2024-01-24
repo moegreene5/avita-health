@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoIosSearch } from "react-icons/io";
 import SideBar from "./SideBar";
-import avitaLogo from "/src/Avita-Health-System-Logo_web.svg";
+// import avitaLogo from "/src/Avita-Health-System-Logo_web.svg";
 // import avita from "../assets/AvitaHealth.png";
 import avita from "../assets/alogo.jpeg";
 

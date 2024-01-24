@@ -203,10 +203,10 @@
 }
 
 .video-height {
-  height: 100%;
+  height: auto;
 }
 
-@media screen and (min-width: "900px") {
+@media screen and (min-width: 900px) {
   .video-height {
     height: 32rem;
   }

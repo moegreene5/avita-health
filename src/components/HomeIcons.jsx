@@ -40,7 +40,9 @@ const HomeIcons = () => {
               href="/"
             >
               <img className="text-center" src={item.icon} alt="" />
-              <h2 className="text-2xl my-1">{item.heading}</h2>
+              <h2 className="sm:text-base md:text-lg lg:text-2xl my-1">
+                {item.heading}
+              </h2>
               <p className="mb-4 hover">{item.paragraph}</p>
             </a>
           </div>
