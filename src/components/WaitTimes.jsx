@@ -16,13 +16,13 @@ const WaitTimes = () => {
           padding: "1rem 0",
         }}
       >
-        <div className="flex justify-center">
+        <div className="flex justify-center items-center">
           <h2 className="text-white text-center sm:text-lg md:text-3xl lg:text-5xl">
             Services
           </h2>
           <span
             onClick={() => setVisible(!visible)}
-            className="relative top-1/2 translate-y-1/2 left-1 cursor-pointer transition-opacity duration-300 ease-in-out"
+            className="relative left-1 cursor-pointer transition-opacity duration-300 ease-in-out"
           >
             <FaInfoCircle color="#f0b410" />
           </span>
