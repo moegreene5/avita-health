@@ -260,7 +260,7 @@
 }
 
 .collapsible-section.open .toggle-symbol {
-  transform: rotate(180deg);
+  transform: rotate(0deg);
 }
 
 .collapsible-content {

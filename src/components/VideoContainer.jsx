@@ -16,8 +16,8 @@ const VideoContainer = () => {
         ></video>
 
         <div className="absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-50">
-          <h1 className="sm:text-base md:text-2xl lg: text-3xl lg:text-5xl mb-4 text-shadow text-center">
-            About Life. About You.
+          <h1 className="text-base sm:text-2xl md:text-3xl lg:text-5xl mb-4 text-shadow text-center">
+            Bringing Care to You, Anytime, Anywhere.
           </h1>
         </div>
       </div>

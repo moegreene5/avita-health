@@ -7,7 +7,7 @@ const Footer = () => {
   const items = [
     {
       h2: "services",
-      links: [
+      li: [
         "Primary Care",
         "Maternity Women",
         "Specialized Consultation",
@@ -19,27 +19,26 @@ const Footer = () => {
     },
     {
       h2: "news",
-      links: ["Avita today", "Health Library", "Press Realeases"],
+      li: ["Avita today", "Health Library", "Press Realeases"],
     },
     {
       h2: "about avita",
-      links: [
-        "Locations",
-        "Executive Leadership",
-        "Carrers",
-        "Employee Resources",
+      li: [
+        "Caring for lives, Transforming lives Daily",
+        "Innovative HealthCare Solutions",
+        "Your Wellness, Our Proiority Everyday",
+        "Leading Expertise in Personalized Health Services",
       ],
     },
     {
-      h2: "information",
-      links: [
-        "Accepted Insurance",
-        "Collection Policy",
-        "Contact Us",
-        "Financial Assistance Summary",
-        "Privacy Policy",
-        "Privacy Practices",
-        "ProtectionsAgainstSupriseBilling",
+      h2: "contact us",
+      li: [
+        "Office: +234 801 234 5678",
+        "Mobile: +234 808 765 4321",
+        "Inquiries: Info@avitahealth.ng",
+        "Feedback : feedback@avitahealth.ng",
+        "Location : 60 Allen Avenue Ikeja Lagos, NG",
+        "Thank you for choosing us",
       ],
     },
   ];
@@ -87,11 +86,9 @@ const Footer = () => {
               >
                 <h2 className="footer-h2">{item.h2}</h2>
                 <ul className="footer-ul pl-0">
-                  {item.links.map((link, index) => (
+                  {item.li.map((link, index) => (
                     <li className="mb-1.5 pl-0" key={index}>
-                      <a className="hover:text-blue-200" href="/">
-                        {link}
-                      </a>
+                      <p className="hover:text-blue-200">{link}</p>
                     </li>
                   ))}
                 </ul>
@@ -103,8 +100,7 @@ const Footer = () => {
 
       <div className="text-center pt-6 pb-3 text-sm">
         <p>&copy; 2024 Avita Health System. All Rights Reserved.</p>
-        <p>Avita Health System is an equal opportunity provider.</p>
-        <p>Power by ChaceByte</p>
+        <p>Powered by Chacebyte</p>
       </div>
     </div>
   );
