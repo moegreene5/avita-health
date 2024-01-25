@@ -211,3 +211,61 @@
     height: 32rem;
   }
 }
+
+/* collapsible */
+
+.collapsible-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0.5rem;
+}
+
+@media screen and (min-width: 820px) {
+  .collapsible-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.collapsible-section {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.collapsible-header {
+  padding: 15px;
+  cursor: pointer;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+.collapsible-header:hover {
+  background-color: #e2e6ea;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-symbol {
+  transition: transform 0.3s ease-out;
+}
+
+.collapsible-section.open .toggle-symbol {
+  transform: rotate(180deg);
+}
+
+.collapsible-content {
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  max-height: 500px; /* Adjust the max height as needed */
+}
+
+.content-inner {
+  padding: 15px;
+  background-color: #fff;
+}

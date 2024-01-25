@@ -1,6 +1,7 @@
 import "./App.css";
 import Banner from "./components/Banner";
 import Carousel from "./components/Carousel";
+import Faq from "./components/Faq";
 import Footer from "./components/Footer";
 import HomeBanner from "./components/HomeBanner";
 import HomeIcons from "./components/HomeIcons";
@@ -18,6 +19,7 @@ function App() {
       <Carousel />
       <HomeBanner />
       <HomeIcons />
+      <Faq />
       <Footer />
     </>
   );

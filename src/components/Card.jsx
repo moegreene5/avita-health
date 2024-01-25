@@ -4,7 +4,7 @@ const Card = ({ image, heading }) => {
     <div
       style={{
         background: "#e7e7e7",
-        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+        boxShadow: "0 0 20px 10px #f3f3f3",
       }}
       className="rounded-lg overflow-hidden mx-4"
     >
