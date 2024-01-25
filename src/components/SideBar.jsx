@@ -34,7 +34,9 @@ const SideBar = ({ toggled, setToggle }) => {
             }
             key={index}
           >
-            <a href={listItem.link}>{listItem.title}</a>
+            <a onClick={() => setToggle(false)} href={listItem.link}>
+              {listItem.title}
+            </a>
           </li>
         ))}
       </ul>
