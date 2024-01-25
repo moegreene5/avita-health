@@ -22,7 +22,7 @@ const WaitTimes = () => {
           </h2>
           <span
             onClick={() => setVisible(!visible)}
-            className="relative top-2 left-1 cursor-pointer transition-opacity duration-300 ease-in-out"
+            className="relative top-1/2 translate-y-1/2 left-1 cursor-pointer transition-opacity duration-300 ease-in-out"
           >
             <FaInfoCircle color="#f0b410" />
           </span>

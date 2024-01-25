@@ -1,12 +1,15 @@
-import Card from "./Card";
-import hospital1 from "../assets/hospital3.jpg";
-import hospital2 from "../assets/hospital4.jpg";
-import hospital3 from "../assets/hospital5.jpg";
+import { GrNext, GrPrevious } from "react-icons/gr";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { GrPrevious } from "react-icons/gr";
-import { GrNext } from "react-icons/gr";
+import "slick-carousel/slick/slick.css";
+import gathering from "../assets/gathering.jpeg";
+import hospital2 from "../assets/hospital4.jpg";
+import maternity from "../assets/maternity.jpg";
+import patientCare from "../assets/patientCare.jpg";
+import people from "../assets/people.jpeg";
+import stethescope from "../assets/pinkStetescope.jpeg";
+import telehealth from "../assets/telehealth.jpg";
+import Card from "./Card";
 
 const CarouselComponent = () => {
   const settings = {
@@ -52,23 +55,19 @@ const CarouselComponent = () => {
 
   const items = [
     {
-      image: hospital1,
+      image: people,
       heading: "Avita for all",
     },
     {
-      image: hospital3,
+      image: stethescope,
       heading: "Avita for all",
     },
     {
-      image: hospital2,
+      image: gathering,
       heading: "Avita for all",
     },
     {
-      image: hospital3,
-      heading: "Avita for all",
-    },
-    {
-      image: hospital1,
+      image: patientCare,
       heading: "Avita for all",
     },
     {
@@ -76,19 +75,11 @@ const CarouselComponent = () => {
       heading: "Avita for all",
     },
     {
-      image: hospital3,
+      image: maternity,
       heading: "Avita for all",
     },
     {
-      image: hospital1,
-      heading: "Avita for all",
-    },
-    {
-      image: hospital3,
-      heading: "Avita for all",
-    },
-    {
-      image: hospital2,
+      image: telehealth,
       heading: "Avita for all",
     },
   ];
