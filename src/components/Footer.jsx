@@ -6,15 +6,15 @@ import linkedIn from "../assets/LinkedIn.svg";
 const Footer = () => {
   const items = [
     {
-      h2: "actions",
+      h2: "services",
       links: [
-        "Find a Doctor",
-        "Pay your bill",
-        "Personalized estimates",
-        "Sponsorship Request",
-        "Nominate a Nurse",
-        "Nominate an Employee",
-        "Volunteer",
+        "Primary Care",
+        "Maternity Women",
+        "Specialized Consultation",
+        "Laboratory Tests",
+        "Diagnostic Imaging",
+        "TeleHealth Services",
+        "Mental Health and Counselling",
       ],
     },
     {
@@ -104,6 +104,7 @@ const Footer = () => {
       <div className="text-center pt-6 pb-3 text-sm">
         <p>&copy; 2024 Avita Health System. All Rights Reserved.</p>
         <p>Avita Health System is an equal opportunity provider.</p>
+        <p>Power by ChaceByte</p>
       </div>
     </div>
   );

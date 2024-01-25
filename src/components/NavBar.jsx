@@ -1,7 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
-import { IoIosSearch } from "react-icons/io";
 import SideBar from "./SideBar";
 // import avitaLogo from "/src/Avita-Health-System-Logo_web.svg";
 // import avita from "../assets/AvitaHealth.png";
@@ -31,16 +30,9 @@ const NavBar = () => {
 
           <div className="flex justify-between items-center">
             <div className="mr-3 hidden md:block">
-              <form className="relative flex items-center" action="">
-                <input
-                  className="border-2 border-gray-300 rounded-xl mt-1 p-4 py-2 bg-transparent outline-none"
-                  type="text"
-                  placeholder="Search..."
-                />
-                <span className="absolute  right-2 text-2xl border-l-2 border-gray-300 cursor-pointer p-2 text-blue-900">
-                  <IoIosSearch />
-                </span>
-              </form>
+              <button className="p-3 rounded-lg text-blue-500 border-2 border-blue-500 hover:bg-blue-500 hover:text-white">
+                <a href="https://avital-care.vercel.app/login">Sign In</a>
+              </button>
             </div>
             <button onClick={() => setToggle(true)}>
               <span className="text-3xl text-blue-900 md:hidden">
