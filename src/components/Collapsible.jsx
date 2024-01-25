@@ -12,7 +12,12 @@ const Collapsible = ({ heading, content }) => {
 
   return (
     <div className={`collapsible-section ${isOpen ? "open" : ""}`}>
-      <div className="collapsible-header" onClick={toggleCollapsible}>
+      <div
+        className={
+          isOpen ? "collapsible-header text-blue-400" : "collapsible-header"
+        }
+        onClick={toggleCollapsible}
+      >
         <div className="header-content">
           <h2>{heading}</h2>
           <span className="toggle-symbol">

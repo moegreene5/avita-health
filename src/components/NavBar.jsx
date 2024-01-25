@@ -10,7 +10,13 @@ import avita from "../assets/alogo.jpeg";
 const NavBar = () => {
   const [toggled, setToggle] = useState(false);
 
-  const list = ["HOME", "SERVICES", "MY PORTAL", "F.A.Q", "CONTACT US"];
+  const list = [
+    { title: "HOME", link: "/" },
+    { title: "SERVICES", link: "#services" },
+    { title: "MY PORTAL", link: "https://avital-care.vercel.app/login" },
+    { title: "F.A.Q", link: "#faq" },
+    { title: "CONTACT US", link: "#contact" },
+  ];
   return (
     <>
       <div className="py-3 px-4 border-b-2 border-blue-700">
@@ -52,7 +58,7 @@ const NavBar = () => {
               className="mx-3 p-3 text-base lg:text-lg text-white hover:text-blue-300 hover:cursor-pointer transition-all"
               key={index}
             >
-              <a href="">{listItem}</a>
+              <a href={listItem.link}>{listItem.title}</a>
             </li>
           ))}
         </ul>

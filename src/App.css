@@ -61,6 +61,10 @@
   background-image: url("../public/blue.jpeg");
 }
 
+.side-background {
+  background-image: url("../public/sidebar.jpg");
+}
+
 .bucyrus {
   background-image: url("../public/bucyrus-er.webp");
   background-position: center;

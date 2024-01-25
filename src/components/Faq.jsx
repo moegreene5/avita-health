@@ -48,7 +48,7 @@ const Faq = () => {
   ];
 
   return (
-    <div className="p-4 text-center">
+    <div id="faq" className="p-4 text-center">
       <h4 className="text-base md:text-lg lg:text-2xl">Got a question?</h4>
       <h1
         style={{ color: "#004680" }}
@@ -59,7 +59,7 @@ const Faq = () => {
 
       <div className="collapsible-grid mt-8">
         {/* first section of questions */}
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col items-center">
           {items1.map((item, index) => (
             <Collapsible
               key={index}
@@ -70,7 +70,7 @@ const Faq = () => {
         </div>
 
         {/* second section of questions */}
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col items-center">
           {items2.map((item, index) => (
             <Collapsible
               key={index}

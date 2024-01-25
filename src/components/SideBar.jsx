@@ -1,17 +1,20 @@
 /* eslint-disable react/prop-types */
 import { IoMdExit } from "react-icons/io";
-import { IoIosSearch } from "react-icons/io";
 
 const SideBar = ({ toggled, setToggle }) => {
-  const list = ["HOME", "SERVICES", "MY PORTAL", "F.A.Q", "CONTACT US"];
-
+  const list = [
+    { title: "HOME", link: "/" },
+    { title: "SERVICES", link: "#services" },
+    { title: "MY PORTAL", link: "https://avital-care.vercel.app/login" },
+    { title: "F.A.Q", link: "#faq" },
+    { title: "CONTACT US", link: "#contact" },
+  ];
   return (
     <div
-      style={{ backgroundColor: "rgba(128, 128, 128, 0.9)" }}
       className={
         toggled
-          ? "bg-gray-700 fixed right-0 top-0 h-screen  z-50 pl-4 pr-12 py-8 flex flex-col justify-start items-start md:hidden transition-all ease-in"
-          : "bg-gray-700 fixed right-0 top-0 h-screen  z-50 pl-4 pr-12 py-8 hidden flex-col justify-start items-start md:hidden transition-all ease-out"
+          ? "side-background fixed right-0 top-0 h-screen  z-50 pl-4 pr-12 py-8 flex flex-col justify-start items-start md:hidden transition-all ease-in"
+          : "side-background fixed right-0 top-0 h-screen  z-50 pl-4 pr-12 py-8 hidden flex-col justify-start items-start md:hidden transition-all ease-out"
       }
     >
       <button
@@ -20,16 +23,7 @@ const SideBar = ({ toggled, setToggle }) => {
       >
         <IoMdExit />
       </button>
-      <form className="relative flex items-center mb-2" action="">
-        <input
-          className="border-2 border-gray-300 rounded-xl mt-1 p-4 py-2 bg-transparent outline-none text-white"
-          type="text"
-          placeholder="Search..."
-        />
-        <span className="absolute  right-2 text-2xl border-l-2 border-gray-300 cursor-pointer p-2 text-white">
-          <IoIosSearch />
-        </span>
-      </form>
+
       <ul className="w-full">
         {list.map((listItem, index) => (
           <li
@@ -40,7 +34,7 @@ const SideBar = ({ toggled, setToggle }) => {
             }
             key={index}
           >
-            <a href="">{listItem}</a>
+            <a href={listItem.link}>{listItem.title}</a>
           </li>
         ))}
       </ul>

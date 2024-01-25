@@ -27,7 +27,7 @@ const HomeIcons = () => {
     },
   ];
   return (
-    <div className="py-12 px-6">
+    <div id="services" className="py-12 px-6">
       <div className="home-icons text-center">
         {items.map((item, index) => (
           <div

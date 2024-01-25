@@ -45,7 +45,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="max-w-full">
+    <div id="contact" className="max-w-full">
       <div className="blue flex flex-col">
         <div className="p-0">
           <div className="flex justify-center items-center p-8 border-b-2 border-white w-4/5 mx-auto">
@@ -56,21 +56,21 @@ const Footer = () => {
                 alt="facebook icon"
               />
             </a>
-            <a href="/">
+            <a href="https://www.instagram.com/avitahealth24_7?igsh=MXFrcGo1cDQ1amcyYQ==">
               <img
                 className="footer-icons mx-4 hover:scale-150 transition-all max-w-full"
                 src={instagram}
                 alt="instagram icon"
               />
             </a>
-            <a href="/">
+            <a href="https://x.com/Avitahealth24_7?t=2eUjOePd63RjNdLtWglKcw&s=08">
               <img
                 className="footer-icons mx-4 hover:scale-150 transition-all max-w-full"
                 src={x}
                 alt="twitter icon"
               />
             </a>
-            <a href="/">
+            <a href="https://www.linkedin.com/company/avita-health-ltd-carego-24-7/">
               <img
                 className="footer-icons mx-4 hover:scale-150 transition-all max-w-full"
                 src={linkedIn}
