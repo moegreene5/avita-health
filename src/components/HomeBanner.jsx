@@ -18,12 +18,12 @@ const HomeBanner = () => {
             Empower health and inspire hope with Avita- Your partner in
             fostering wellness through impactful donations
           </p>
-          <a
-            className="inline-block border-4 border-white rounded-lg bg-transparent px-4 py-1.5 text-lg hover:bg-white hover:text-blue-900"
-            href="/"
+          <button
+            className="inline-block border-4 border-white rounded-lg bg-transparent px-4 py-1.5 text-lg"
+            disabled="true"
           >
-            <button>Donate Today!</button>
-          </a>
+            Coming Soon!
+          </button>
         </div>
       </div>
 
@@ -38,12 +38,12 @@ const HomeBanner = () => {
             Empower health and inspire hope with Avita- Your partner in
             fostering wellness through impactful donations
           </p>
-          <a
-            href="/"
-            className="inline-block border-4 border-white rounded-lg text-a text-padding bg-transparent hover:bg-white hover:text-blue-900 mb-3"
+          <button
+            disabled="true"
+            className="inline-block border-4 border-white rounded-lg text-a text-padding bg-transparent mb-3"
           >
-            <button>Donate Today!</button>
-          </a>
+            Coming Soon!
+          </button>
         </div>
       </div>
     </>
