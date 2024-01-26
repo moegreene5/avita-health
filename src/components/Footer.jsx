@@ -9,7 +9,7 @@ const Footer = () => {
       h2: "services",
       li: [
         "Primary Care",
-        "Maternity Women",
+        "Maternal Health Care",
         "Specialized Consultation",
         "Laboratory Tests",
         "Diagnostic Imaging",
@@ -26,7 +26,7 @@ const Footer = () => {
       li: [
         "Caring for lives, Transforming lives Daily",
         "Innovative HealthCare Solutions",
-        "Your Wellness, Our Proiority Everyday",
+        "Your Wellness, Our Priority Everyday",
         "Leading Expertise in Personalized Health Services",
       ],
     },
