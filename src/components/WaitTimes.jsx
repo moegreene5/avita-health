@@ -34,18 +34,11 @@ const WaitTimes = () => {
             }`}
           >
             <p className="text-center text-white mt-3 text-sm">
-              The Emergency Department (ED) wait times are approximate and
-              provided for information purposes only. It is approximate, and
-              based on a rolling average that is updated four times an hour and
-              does not represent actual activity in the ED waiting room.
+              We are dedicated to serve you best medical services
             </p>
             <p className="text-center text-white mt-1 text-sm">
-              The ED wait time represents the time it takes from arrival until a
-              patient is initially seen by a medical professional (Physician,
-              Physician Assistant, or Nurse Practitioner). Patients are triaged
-              upon their arrival in the ED. They are seen by a medical
-              professional in an order based on their condition, complaint, and
-              reason for their visit.
+              Experience healthcare from the comfort of your home through
+              virtual appointments with our medical professionals.
             </p>
           </div>
         )}
@@ -56,7 +49,10 @@ const WaitTimes = () => {
         <div className="bucyrus py-5 border-b-2 border-white md:border-b-0 md:w-1/3 md:border-r-2">
           <div className="flex flex-row md:flex-col flex-grow-0 flex-shrink justify-center items-center text-white text-sm md:text-lg lg:text-2xl text-shadow">
             <h3 className="mr-4">
-              <a className="text-nowrap" href="">
+              <a
+                className="text-nowrap"
+                href="https://avital-care.vercel.app/signup"
+              >
                 PRIMARY CARE
               </a>
             </h3>
@@ -72,7 +68,7 @@ const WaitTimes = () => {
         <div className="gallion py-5 border-b-2 border-white md:border-b-0 md:w-1/3 md:border-r-2">
           <div className="flex flex-row md:flex-col flex-grow-0 flex-shrink justify-center items-center text-white text-sm md:text-lg lg:text-2xl text-shadow">
             <h3 className="mr-4">
-              <a href="">MATERNITY WOMEN</a>
+              <a href="https://avital-care.vercel.app/signup">MATERNAL WOMEN</a>
             </h3>
             <p className="flex items-center">
               <span>
@@ -86,7 +82,9 @@ const WaitTimes = () => {
         <div className="ontario py-5 border-b border-white md:border-b-0 md:w-1/3">
           <div className="flex flex-row md:flex-col flex-grow-0 flex-shrink justify-center items-center text-white text-sm md:text-lg lg:text-2xl text-shadow">
             <h3 className="mr-4">
-              <a href="">SPECIALIZED CONSULTATION</a>
+              <a href="https://avital-care.vercel.app/signup">
+                SPECIALIZED CONSULTATION
+              </a>
             </h3>
             <p className="flex items-center flex-shrink">
               <span>

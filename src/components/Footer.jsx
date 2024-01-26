@@ -100,7 +100,7 @@ const Footer = () => {
 
       <div className="text-center pt-6 pb-3 text-sm">
         <p>&copy; 2024 Avita Health System. All Rights Reserved.</p>
-        <p>Powered by Chacebyte</p>
+        <p>Powered by Chacebyte technologies</p>
       </div>
     </div>
   );

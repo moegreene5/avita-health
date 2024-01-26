@@ -37,7 +37,7 @@ const HomeIcons = () => {
           >
             <a
               className="flex flex-col justify-center items-center text-center"
-              href="/"
+              href="https://avital-care.vercel.app/signup"
             >
               <img className="text-center" src={item.icon} alt="" />
               <h2 className="sm:text-base md:text-lg lg:text-2xl my-1">

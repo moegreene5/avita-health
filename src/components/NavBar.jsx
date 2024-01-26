@@ -31,7 +31,7 @@ const NavBar = () => {
           <div className="flex justify-between items-center">
             <div className="mr-3 hidden md:block">
               <button className="p-3 rounded-lg text-blue-500 border-2 border-blue-500 hover:bg-blue-500 hover:text-white">
-                <a href="https://avital-care.vercel.app/login">Sign In</a>
+                <a href="https://avital-care.vercel.app/signup">Sign Up</a>
               </button>
             </div>
             <button onClick={() => setToggle(true)}>
