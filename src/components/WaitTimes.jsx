@@ -34,11 +34,13 @@ const WaitTimes = () => {
             }`}
           >
             <p className="text-center text-white mt-3 text-sm">
-              We are dedicated to serve you best medical services
-            </p>
-            <p className="text-center text-white mt-1 text-sm">
-              Experience healthcare from the comfort of your home through
-              virtual appointments with our medical professionals.
+              We are dedicated to serve you best medical servicesWelcome to our
+              healthcare oasis, where compassion meets innovation. Here we
+              seamlessly blend excellence in hospitals, home health services,
+              medical tourism, and telemedicine. Whether you&apos;re seeking
+              top-notch facilities, personalized home care, exploring medical
+              tourism, or expert telemedicine advice, we&apos;re here for you.
+              Join us on a journey where health, healing, and hope converge.
             </p>
           </div>
         )}
