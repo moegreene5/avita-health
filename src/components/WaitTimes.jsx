@@ -69,7 +69,7 @@ const WaitTimes = () => {
           <div className="flex flex-row md:flex-col flex-grow-0 flex-shrink justify-center items-center text-white text-sm md:text-lg lg:text-2xl text-shadow">
             <h3 className="mr-4">
               <a href="https://avital-care.vercel.app/signup">
-                MATERNAL HEALTH WOMEN
+                MATERNAL HEALTH CARE
               </a>
             </h3>
             <p className="flex items-center">
