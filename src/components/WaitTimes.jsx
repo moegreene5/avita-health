@@ -68,7 +68,9 @@ const WaitTimes = () => {
         <div className="gallion py-5 border-b-2 border-white md:border-b-0 md:w-1/3 md:border-r-2">
           <div className="flex flex-row md:flex-col flex-grow-0 flex-shrink justify-center items-center text-white text-sm md:text-lg lg:text-2xl text-shadow">
             <h3 className="mr-4">
-              <a href="https://avital-care.vercel.app/signup">MATERNAL WOMEN</a>
+              <a href="https://avital-care.vercel.app/signup">
+                MATERNAL HEALTH WOMEN
+              </a>
             </h3>
             <p className="flex items-center">
               <span>
