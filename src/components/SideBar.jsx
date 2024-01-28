@@ -11,11 +11,11 @@ const SideBar = ({ toggled, setToggle }) => {
   ];
   return (
     <div
-      className={
+      className={`side-background fixed right-0 top-0 h-screen z-50 pl-4 pr-12 py-8 flex flex-col justify-start items-start md:hidden ${
         toggled
-          ? "side-background fixed right-0 top-0 h-screen z-50 pl-4 pr-12 py-8 flex flex-col justify-start items-start md:hidden transition-all ease-in duration-300"
-          : "side-background fixed right-0 top-0 h-screen z-50 pl-4 pr-12 py-8 hidden flex-col justify-start items-start md:hidden transition-all ease-out duration-300"
-      }
+          ? "transition-transform ease-in duration-300 transform translate-x-0"
+          : "transition-transform ease-out duration-300 transform translate-x-full"
+      }`}
     >
       <button
         onClick={() => setToggle(false)}
@@ -27,11 +27,11 @@ const SideBar = ({ toggled, setToggle }) => {
       <ul className="w-full">
         {list.map((listItem, index) => (
           <li
-            className={
+            className={`${
               index === list.length - 1
                 ? "text-white text-lg p-3 w-auto hover:bg-gray-900 hover:cursor-pointer transition-all"
                 : "text-white text-lg border-b-4 border-white p-3 w-auto hover:bg-gray-900 hover:cursor-pointer transition-all"
-            }
+            }`}
             key={index}
           >
             <a onClick={() => setToggle(false)} href={listItem.link}>

@@ -62,7 +62,7 @@
 }
 
 .side-background {
-  background: linear-gradient(to bottom, #346eeb, #ffffff);
+  background: linear-gradient(to bottom, #346eeb 60%, #ffffff 100%);
 }
 
 .bucyrus {
