@@ -24,7 +24,7 @@ const ScrollToTop = () => {
       {visible && (
         <span
           style={{
-            zIndex: "99999999",
+            zIndex: "9999",
             borderRadius: "100%",
             backgroundColor: "rgba(0, 70, 128, 0.7)",
           }}

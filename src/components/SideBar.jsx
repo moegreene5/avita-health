@@ -33,6 +33,7 @@ const SideBar = ({ toggled, setToggle }) => {
   return (
     <div
       ref={sideBarRef}
+      style={{ zIndex: "99999999" }}
       className={`side-background fixed right-0 top-0 h-screen z-50 pl-4 pr-12 py-8 flex flex-col justify-start items-start md:hidden ${
         toggled
           ? "transition-transform ease-in duration-300 transform translate-x-0"
