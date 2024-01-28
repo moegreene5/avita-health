@@ -26,7 +26,7 @@ const ScrollToTop = () => {
           style={{
             zIndex: "99999999",
             borderRadius: "100%",
-            backgroundColor: "rgba(0, 70, 128, 0.8)",
+            backgroundColor: "rgba(0, 70, 128, 0.7)",
           }}
           onClick={scrollUp}
           className="fixed bottom-6 right-3 h-12 w-12 flex items-center justify-center text-white hover:scale-110 transition-all duration-100 hover:cursor-pointer"
