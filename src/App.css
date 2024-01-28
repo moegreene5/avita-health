@@ -62,7 +62,7 @@
 }
 
 .side-background {
-  background-image: url("../public/sidebar.jpg");
+  background: linear-gradient(to bottom, #346eeb, #ffffff);
 }
 
 .bucyrus {

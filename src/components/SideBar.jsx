@@ -13,13 +13,13 @@ const SideBar = ({ toggled, setToggle }) => {
     <div
       className={
         toggled
-          ? "side-background fixed right-0 top-0 h-screen  z-50 pl-4 pr-12 py-8 flex flex-col justify-start items-start md:hidden transition-all ease-in"
-          : "side-background fixed right-0 top-0 h-screen  z-50 pl-4 pr-12 py-8 hidden flex-col justify-start items-start md:hidden transition-all ease-out"
+          ? "side-background fixed right-0 top-0 h-screen z-50 pl-4 pr-12 py-8 flex flex-col justify-start items-start md:hidden transition-all ease-in duration-300"
+          : "side-background fixed right-0 top-0 h-screen z-50 pl-4 pr-12 py-8 hidden flex-col justify-start items-start md:hidden transition-all ease-out duration-300"
       }
     >
       <button
         onClick={() => setToggle(false)}
-        className="text-3xl text-white text-right hover:scale-125 transition-all hover:cursor-pointer active:scale-75 mb-2"
+        className="text-3xl text-white text-right hover:scale-125 transition-transform hover:cursor-pointer active:scale-75 mb-2"
       >
         <IoMdExit />
       </button>
@@ -29,8 +29,8 @@ const SideBar = ({ toggled, setToggle }) => {
           <li
             className={
               index === list.length - 1
-                ? "text-white text-lg p-3 w-auto hover:bg-gray-900 hover:cursor-pointer"
-                : "text-white text-lg border-b-4 border-white p-3 w-auto hover:bg-gray-900 hover:cursor-pointer"
+                ? "text-white text-lg p-3 w-auto hover:bg-gray-900 hover:cursor-pointer transition-all"
+                : "text-white text-lg border-b-4 border-white p-3 w-auto hover:bg-gray-900 hover:cursor-pointer transition-all"
             }
             key={index}
           >

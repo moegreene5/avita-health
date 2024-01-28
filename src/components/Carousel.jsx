@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import gathering from "../assets/gathering.jpeg";
 import hospital2 from "../assets/hospital4.jpg";
-// import maternity from "../assets/maternity.jpg";
 import patientCare from "../assets/patientCare.jpg";
 import people from "../assets/people.jpeg";
 import stethescope from "../assets/pinkStetescope.jpeg";
