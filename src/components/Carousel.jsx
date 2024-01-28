@@ -17,7 +17,6 @@ const CarouselComponent = () => {
     dots: false,
     speed: 500,
     slidesToShow: 4,
-    pauseOnFocus: true,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
