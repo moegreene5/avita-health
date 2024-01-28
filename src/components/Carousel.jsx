@@ -20,7 +20,7 @@ const CarouselComponent = () => {
     pauseOnFocus: true,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 4000,
     centerMode: true,
     arrows: true,
     prevArrow: <GrPrevious color="#004680" fontSize="2rem" />,
