@@ -42,18 +42,18 @@ const SideBar = ({ toggled, setToggle }) => {
     >
       <button
         onClick={() => setToggle(false)}
-        className="text-3xl text-white text-right hover:scale-125 transition-transform hover:cursor-pointer active:scale-75 mb-2"
+        className="text-3xl text-white text-right hover:scale-125 transition-transform hover:cursor-pointer active:scale-75 mb-4"
       >
         <IoMdExit />
       </button>
 
-      <ul className="w-full">
+      <ul className="w h-full">
         {list.map((listItem, index) => (
           <li
             className={`${
               index === list.length - 1
-                ? "text-white text-lg p-3 w-auto hover:bg-gray-900 hover:cursor-pointer transition-all"
-                : "text-white text-lg border-b-4 border-white p-3 w-auto hover:bg-blue-800 hover:cursor-pointer transition-all"
+                ? "text-white text-lg p-3 w-auto hover:bg-blue-900 hover:cursor-pointer transition-all"
+                : "text-white text-lg border-b-2 border-white p-3 w-auto hover:bg-blue-800 hover:cursor-pointer transition-all"
             }`}
             key={index}
           >

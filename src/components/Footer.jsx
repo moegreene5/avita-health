@@ -78,7 +78,7 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="footer mb-12">
+          <div className="footer mb-8">
             {items.map((item, index) => (
               <div
                 key={index}

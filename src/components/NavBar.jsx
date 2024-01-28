@@ -19,7 +19,7 @@ const NavBar = () => {
   ];
   return (
     <>
-      <div className="py-3 px-4 border-b-2 border-blue-700">
+      <div className="py-3 px-4 border-b-2 lg:border-b-0 border-blue-700">
         <div className="flex justify-between items-center flex-wrap">
           <a href="/">
             <img
