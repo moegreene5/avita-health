@@ -57,11 +57,11 @@ const SideBar = ({ toggled, setToggle }) => {
             }`}
             key={index}
           >
-            {listItem.title === "DOCTORS" ? (
+            {listItem.title === "DOCTORS" || listItem.title === "HOME" ? (
               <Link onClick={() => setToggle(false)} to={listItem.link}>
                 {listItem.title}{" "}
               </Link>
-            ) : listItem.title === "MY PORTAL" || listItem.title === "HOME" ? (
+            ) : listItem.title === "MY PORTAL" ? (
               <a onClick={() => setToggle(false)} href={listItem.link}>
                 {listItem.title}
               </a>

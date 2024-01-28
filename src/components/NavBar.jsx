@@ -51,7 +51,7 @@ const NavBar = () => {
               className="mx-3 p-3 text-base lg:text-lg text-white hover:text-blue-300 hover:cursor-pointer transition-all"
               key={index}
             >
-              {listItem.title === "DOCTORS" ? (
+              {listItem.title === "DOCTORS" || listItem.title === "HOME" ? (
                 <Link onClick={() => setToggle(false)} to={listItem.link}>
                   {listItem.title}{" "}
                 </Link>
