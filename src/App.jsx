@@ -6,12 +6,14 @@ import Footer from "./components/Footer";
 import HomeBanner from "./components/HomeBanner";
 import HomeIcons from "./components/HomeIcons";
 import NavBar from "./components/NavBar";
+import ScrollToTop from "./components/ScrollToTop";
 import VideoContainer from "./components/VideoContainer";
 import WaitTimes from "./components/WaitTimes";
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <NavBar />
       <VideoContainer />
       <WaitTimes />

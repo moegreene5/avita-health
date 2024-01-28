@@ -20,7 +20,7 @@ const HomeBanner = () => {
           </p>
           <button
             className="inline-block border-4 border-white rounded-lg bg-transparent px-4 py-1.5 text-lg"
-            disabled="true"
+            disabled={true}
           >
             Coming Soon!
           </button>
@@ -39,7 +39,7 @@ const HomeBanner = () => {
             fostering wellness through impactful donations
           </p>
           <button
-            disabled="true"
+            disabled={true}
             className="inline-block border-4 border-white rounded-lg text-a text-padding bg-transparent mb-3"
           >
             Coming Soon!

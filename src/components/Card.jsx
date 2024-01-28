@@ -10,9 +10,7 @@ const Card = ({ image, heading }) => {
     >
       <div className="flex flex-col justify-between h-full">
         <div>
-          <a className="outline-none" href="/">
-            <img className="object-cover h-48 w-full" src={image} alt="" />
-          </a>
+          <img className="object-cover h-48 w-full" src={image} alt="" />
         </div>
         <div className="min-h-14 my-4 mx-2">
           <h3

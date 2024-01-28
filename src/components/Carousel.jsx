@@ -15,37 +15,34 @@ const CarouselComponent = () => {
     className: "center",
     centerPadding: "0",
     dots: false,
-    infinite: true,
     speed: 500,
     slidesToShow: 4,
+    pauseOnFocus: true,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 2000,
     centerMode: true,
     arrows: true,
+    prevArrow: <GrPrevious color="#004680" fontSize="2rem" />,
+    nextArrow: <GrNext color="#004680" fontSize="2rem" />,
 
     responsive: [
       {
         breakpoint: 1500,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
         },
       },
       {
         breakpoint: 1000,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
           arrows: false,
         },
       },
@@ -78,10 +75,6 @@ const CarouselComponent = () => {
       heading:
         "The Unveiling: A Tapestry of Compassion Picture a tapestry woven with threads of compassion and resilience. As the event unfolds, join us in unraveling the stories of survivors, the journeys of warriors, and the triumphs over adversity. Avita Health System is not just hosting an event; we are crafting an immersive experience that transforms statistics into stories and pink ribbons into beacons of hope.",
     },
-    // {
-    //   image: maternity,
-    //   heading: "Avita for all",
-    // },
     {
       image: telehealth,
       heading:
@@ -102,11 +95,7 @@ const CarouselComponent = () => {
         {/* CarouselComponent */}
 
         <div className="" style={{ maxWidth: "90vw", margin: "0 auto" }}>
-          <Slider
-            prevArrow={<GrPrevious color="#004680" fontSize="2rem" />}
-            nextArrow={<GrNext color="#004680" fontSize="2rem" />}
-            {...settings}
-          >
+          <Slider {...settings}>
             {items.map((item, index) => (
               <Card key={index} image={item.image} heading={item.heading} />
             ))}

@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import SideBar from "./SideBar";
-// import avitaLogo from "/src/Avita-Health-System-Logo_web.svg";
-// import avita from "../assets/AvitaHealth.png";
+import { Link } from "react-router-dom";
+import ScrollTo from "./ScrollTo";
 import avita from "../assets/alogo.jpeg";
 
 const NavBar = () => {
@@ -11,10 +11,11 @@ const NavBar = () => {
 
   const list = [
     { title: "HOME", link: "/" },
-    { title: "SERVICES", link: "#services" },
+    { title: "SERVICES", link: "services" },
+    { title: "DOCTORS", link: "/doctors" },
     { title: "MY PORTAL", link: "https://avital-care.vercel.app/login" },
-    { title: "F.A.Q", link: "#faq" },
-    { title: "CONTACT US", link: "#contact" },
+    { title: "F.A.Q", link: "faq" },
+    { title: "CONTACT US", link: "contact" },
   ];
   return (
     <>
@@ -50,7 +51,20 @@ const NavBar = () => {
               className="mx-3 p-3 text-base lg:text-lg text-white hover:text-blue-300 hover:cursor-pointer transition-all"
               key={index}
             >
-              <a href={listItem.link}>{listItem.title}</a>
+              {listItem.title === "DOCTORS" ? (
+                <Link onClick={() => setToggle(false)} to={listItem.link}>
+                  {listItem.title}{" "}
+                </Link>
+              ) : listItem.title === "MY PORTAL" ||
+                listItem.title === "HOME" ? (
+                <a onClick={() => setToggle(false)} href={listItem.link}>
+                  {listItem.title}
+                </a>
+              ) : (
+                <ScrollTo setState={setToggle} to={listItem.link}>
+                  {listItem.title}
+                </ScrollTo>
+              )}
             </li>
           ))}
         </ul>
