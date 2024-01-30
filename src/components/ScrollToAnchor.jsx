@@ -15,7 +15,7 @@ function ScrollToAnchor() {
       setTimeout(() => {
         document
           .getElementById(lastHash.current)
-          ?.scrollIntoView({ behavior: "smooth" });
+          ?.scrollIntoView({ behavior: "smooth", block: "start" });
 
         navigate(location.pathname, { replace: true });
 
