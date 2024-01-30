@@ -67,7 +67,7 @@ const Doctors = () => {
         Find a Doctor
       </h1>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-12">
-        {items.map((item, index) => (
+        {/* {items.map((item, index) => (
           <div className="justify-self-center" key={index}>
             <img className="object-cover h-72" src={item.img} alt="" />
             <div
@@ -80,6 +80,13 @@ const Doctors = () => {
               </p>
             </div>
           </div>
+        ))} */}
+
+        {items.map((item) => (
+          <div
+            key={item.name}
+            className="bg-gradient-to-r from-blue-300 to-blue-200 animate-pulse shadow-lg p-4 rounded-md h-80"
+          ></div>
         ))}
       </div>
     </div>

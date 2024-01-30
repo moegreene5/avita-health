@@ -2,16 +2,15 @@
 import { IoMdExit } from "react-icons/io";
 import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import ScrollTo from "./ScrollTo";
 
 const SideBar = ({ toggled, setToggle }) => {
   const list = [
     { title: "HOME", link: "" },
-    { title: "SERVICES", link: "services" },
+    { title: "SERVICES", link: "/#services" },
     { title: "DOCTORS", link: "/doctors" },
     { title: "MY PORTAL", link: "https://avital-care.vercel.app/login" },
-    { title: "F.A.Q", link: "faq" },
-    { title: "CONTACT US", link: "contact" },
+    { title: "F.A.Q", link: "/#faq" },
+    { title: "CONTACT US", link: "/#contact" },
   ];
 
   const sideBarRef = useRef(null);
@@ -66,10 +65,13 @@ const SideBar = ({ toggled, setToggle }) => {
                 {listItem.title}
               </a>
             ) : (
-              <Link to="/">
-                <ScrollTo setState={setToggle} to={listItem.link}>
-                  {listItem.title}
-                </ScrollTo>
+              <Link
+                onClick={() => {
+                  setToggle(false);
+                }}
+                to={listItem.link}
+              >
+                {listItem.title}
               </Link>
             )}
           </li>

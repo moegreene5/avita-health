@@ -1,9 +1,9 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import SideBar from "./SideBar";
 import { Link } from "react-router-dom";
-import ScrollTo from "./ScrollTo";
+import scrollTo from "../utils/scrollTo";
 import avita from "../assets/alogo.jpeg";
 
 const NavBar = () => {
@@ -11,11 +11,11 @@ const NavBar = () => {
 
   const list = [
     { title: "HOME", link: "/" },
-    { title: "SERVICES", link: "services" },
+    { title: "SERVICES", link: "/#services" },
     { title: "DOCTORS", link: "/doctors" },
     { title: "MY PORTAL", link: "https://avital-care.vercel.app/login" },
-    { title: "F.A.Q", link: "faq" },
-    { title: "CONTACT US", link: "contact" },
+    { title: "F.A.Q", link: "/#faq" },
+    { title: "CONTACT US", link: "/#contact" },
   ];
   return (
     <>
@@ -63,9 +63,7 @@ const NavBar = () => {
                   {listItem.title}
                 </a>
               ) : (
-                <ScrollTo setState={setToggle} to={listItem.link}>
-                  {listItem.title}
-                </ScrollTo>
+                <Link to={listItem.link}>{listItem.title}</Link>
               )}
             </li>
           ))}
