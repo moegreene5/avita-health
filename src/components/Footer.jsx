@@ -18,19 +18,6 @@ const Footer = () => {
       ],
     },
     {
-      h2: "news",
-      li: ["Avita today", "Health Library", "Press Realeases"],
-    },
-    {
-      h2: "about avita",
-      li: [
-        "Caring for lives, Transforming lives Daily",
-        "Innovative HealthCare Solutions",
-        "Your Wellness, Our Priority Everyday",
-        "Leading Expertise in Personalized Health Services",
-      ],
-    },
-    {
       h2: "contact us",
       li: [
         "Mobile: +234 704 839 1801",
@@ -39,6 +26,10 @@ const Footer = () => {
         "Location : 16, Anipole crescent Gbagada phase 1",
         "Thank you for choosing us",
       ],
+    },
+    {
+      h2: "news",
+      li: ["Avita today", "Health Library", "Press Realeases"],
     },
   ];
 
