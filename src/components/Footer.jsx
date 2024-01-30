@@ -33,11 +33,10 @@ const Footer = () => {
     {
       h2: "contact us",
       li: [
-        "Office: +234 801 234 5678",
-        "Mobile: +234 808 765 4321",
+        "Mobile: +234 704 839 1801",
         "Inquiries: Info@avitahealth.ng",
         "Feedback : feedback@avitahealth.ng",
-        "Location : 60 Allen Avenue Ikeja Lagos, NG",
+        "Location : 16, Anipole crescent Gbagada phase 1",
         "Thank you for choosing us",
       ],
     },

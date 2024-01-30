@@ -66,9 +66,11 @@ const SideBar = ({ toggled, setToggle }) => {
                 {listItem.title}
               </a>
             ) : (
-              <ScrollTo setState={setToggle} to={listItem.link}>
-                {listItem.title}
-              </ScrollTo>
+              <Link to="/">
+                <ScrollTo setState={setToggle} to={listItem.link}>
+                  {listItem.title}
+                </ScrollTo>
+              </Link>
             )}
           </li>
         ))}

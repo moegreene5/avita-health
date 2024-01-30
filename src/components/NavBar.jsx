@@ -34,7 +34,7 @@ const NavBar = () => {
 
           <div className="flex justify-between items-center">
             <div className="mr-3 hidden md:block">
-              <button className="p-3 rounded-lg text-blue-500 border-2 border-blue-500 hover:bg-blue-500 hover:text-white">
+              <button className="p-3 rounded-lg blue-border">
                 <a href="https://avital-care.vercel.app/signup">Sign Up</a>
               </button>
             </div>
@@ -58,8 +58,7 @@ const NavBar = () => {
                 <Link onClick={() => setToggle(false)} to={listItem.link}>
                   {listItem.title}{" "}
                 </Link>
-              ) : listItem.title === "MY PORTAL" ||
-                listItem.title === "HOME" ? (
+              ) : listItem.title === "MY PORTAL" ? (
                 <a onClick={() => setToggle(false)} href={listItem.link}>
                   {listItem.title}
                 </a>

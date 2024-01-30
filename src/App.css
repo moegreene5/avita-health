@@ -61,6 +61,16 @@
   background-image: url("../public/blue.jpeg");
 }
 
+.blue-border {
+  border: 2px solid #004680;
+  color: #004680;
+}
+
+.blue-border:hover {
+  background: #004680;
+  color: whitesmoke;
+}
+
 .side-background {
   background: linear-gradient(to bottom, #004680 60%, #ffffff 100%);
 }

@@ -1,4 +1,5 @@
 import "./App.css";
+import About from "./components/About";
 import Banner from "./components/Banner";
 import Carousel from "./components/Carousel";
 import Faq from "./components/Faq";
@@ -17,6 +18,7 @@ function App() {
       <HomeBanner />
       <HomeIcons />
       <Faq />
+      <About />
     </>
   );
 }
