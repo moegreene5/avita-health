@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import SideBar from "./SideBar";
 import { Link } from "react-router-dom";
-import scrollTo from "../utils/scrollTo";
 import avita from "../assets/alogo.jpeg";
 
 const NavBar = () => {
