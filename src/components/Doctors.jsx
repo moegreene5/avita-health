@@ -1,4 +1,15 @@
+import { useRef, useState } from "react";
+import { FaChevronRight } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
+
 const Doctors = () => {
+  const [visible, setVisible] = useState(false);
+  const [searchText, setSearchText] = useState("");
+
+  const nameRef = useRef(null);
+
+  console.log(searchText);
+
   const items = [
     {
       name: "Agbasi Ifeanyi",
@@ -61,35 +72,88 @@ const Doctors = () => {
       profession: "Basketballer",
     },
   ];
-  return (
-    <div className="p-6">
-      <h1 className="text-center mb-8 text-5xl" style={{ color: "#004680" }}>
-        Find a Doctor
-      </h1>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-12">
-        {/* {items.map((item, index) => (
-          <div className="justify-self-center" key={index}>
-            <img className="object-cover h-72" src={item.img} alt="" />
-            <div
-              style={{ color: "#004680" }}
-              className="p-4 bg-slate-100 text-center"
-            >
-              <h3 className="text-3xl">{item.name}</h3>
-              <p className="text-sm md:text-lg lg:text-2xl">
-                {item.profession}
-              </p>
-            </div>
-          </div>
-        ))} */}
 
-        {items.map((item) => (
-          <div
-            key={item.name}
-            className="bg-gradient-to-r from-blue-300 to-blue-200 animate-pulse shadow-lg p-4 rounded-md h-80"
-          ></div>
-        ))}
+  return (
+    <>
+      <div className="text-center bg-slate-300">
+        <div
+          onClick={() => setVisible(!visible)}
+          className="lg:hidden bg-slate-600 text-white p-3 cursor-pointer relative"
+        >
+          <h3>Filter</h3>
+          {visible ? (
+            <FaChevronDown className="absolute top-1/2 right-6 transform -translate-y-1/2" />
+          ) : (
+            <FaChevronRight className="absolute top-1/2 right-6 transform -translate-y-1/2" />
+          )}
+        </div>
+        <form
+          action=""
+          className={`lg:block ${
+            visible
+              ? "block transition-opacity duration-500 ease-in"
+              : "hidden transition-opacity duration-500 ease-out"
+          }`}
+        >
+          <input
+            className="m-4 p-2 outline-none border-2 border-gray-400"
+            placeholder="Filter by Name"
+            type="text"
+            ref={nameRef}
+          />
+          <button
+            type="button"
+            className=" bg-white m-4 p-2 pr-12 outline-none border-2 border-gray-400 text-gray-400 relative"
+          >
+            Filter by Service
+            <FaChevronDown className="absolute top-1/2 right-2 transform -translate-y-1/2" />
+          </button>
+
+          <button type="reset" className="p-2 px-4 bg-gray-500 text-white m-4">
+            Clear Filter
+          </button>
+          <button
+            style={{ background: "#004680" }}
+            type="button"
+            className="p-2 px-4 text-white m-4"
+            onClick={() => {
+              setSearchText(nameRef.current.value);
+              nameRef.current.value = "";
+            }}
+          >
+            Filter Results
+          </button>
+        </form>
       </div>
-    </div>
+
+      <div className="p-6">
+        <h1 className="text-center mb-8 text-5xl" style={{ color: "#004680" }}>
+          Find a Doctor
+        </h1>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-12">
+          {/* {items.map((item, index) => (
+            <div className="justify-self-center" key={index}>
+              <img className="object-cover h-72" src={item.img} alt="" />
+              <div
+                style={{ color: "#004680" }}
+                className="p-4 bg-slate-100 text-center"
+              >
+                <h3 className="text-3xl">{item.name}</h3>
+                <p className="text-sm md:text-lg lg:text-2xl">
+                  {item.profession}
+                </p>
+              </div>
+            </div>
+          ))} */}
+          {items.map((item) => (
+            <div
+              key={item.name}
+              className="bg-gradient-to-r from-blue-300 to-blue-200 animate-pulse shadow-lg p-4 rounded-md h-80"
+            ></div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 

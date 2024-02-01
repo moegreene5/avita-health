@@ -4,7 +4,10 @@ import avitaHealth from "../assets/Avitahealthcare.mp4";
 const VideoContainer = () => {
   return (
     <>
-      <div className="video-height relative overflow-hidden">
+      <div
+        style={{ backgroundColor: "#004680" }}
+        className="video-height relative overflow-hidden"
+      >
         <video
           className="w-full h-full object-cover"
           preload="none"
