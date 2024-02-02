@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import SideBar from "./SideBar";
 import { Link } from "react-router-dom";
-import avita from "../assets/alogo.jpeg";
+import avitaLogo from "../assets/av4.png";
 
 const NavBar = () => {
   const [toggled, setToggle] = useState(false);
@@ -26,7 +26,7 @@ const NavBar = () => {
           <a href="/">
             <img
               className="w-36 h-12 object-cover"
-              src={avita}
+              src={avitaLogo}
               alt="website logo"
             />
           </a>

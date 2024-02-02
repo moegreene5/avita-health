@@ -1,12 +1,11 @@
-import banner from "../assets/blue-banner.jpeg";
-import foundation from "../assets/foundation-banner.webp";
+import bbanner from "../assets/bbanner.webp";
 
 const HomeBanner = () => {
   return (
     <>
       {/* mobile */}
       <div className="lg:hidden relative text-center text-white">
-        <img src={foundation} alt="" />
+        <img src={bbanner} alt="" />
         <div
           style={{ background: "#004680" }}
           className="relative right-auto bottom-auto px-1 py-4 transform-none w-full"
@@ -29,21 +28,32 @@ const HomeBanner = () => {
 
       {/* desktop */}
       <div className="hidden lg:block relative text-center text-white">
-        <img className="w-full" src={banner} alt="" />
-        <div className="absolute text-center bottom-1/2 translate-y-1/2 w-full right-auto py-8">
-          <h2 className="text-size font-bold mb-6 relative z-10">
-            Avita Health Donation
-          </h2>
-          <p className="mb-4">
-            Empower health and inspire hope with Avita- Your partner in
-            fostering wellness through impactful donations
-          </p>
-          <button
-            disabled={true}
-            className="inline-block border-4 border-white rounded-lg text-a text-padding bg-transparent mb-3"
-          >
-            Coming Soon!
-          </button>
+        {/* Image Container */}
+        <div className="relative">
+          <img className="w-full h-96 object-cover" src={bbanner} alt="" />
+
+          {/* Overlay Div */}
+          <div
+            style={{ background: "#004680" }}
+            className="absolute inset-0 opacity-75"
+          ></div>
+
+          {/* Text and Button */}
+          <div className="absolute text-center bottom-1/2 translate-y-1/2 w-full right-auto py-8">
+            <h2 className="text-size font-bold mb-6 relative z-10">
+              Avita Health Donation
+            </h2>
+            <p className="mb-4">
+              Empower health and inspire hope with Avita- Your partner in
+              fostering wellness through impactful donations
+            </p>
+            <button
+              disabled={true}
+              className="inline-block border-4 border-white rounded-lg text-a text-padding bg-transparent mb-3"
+            >
+              Coming Soon!
+            </button>
+          </div>
         </div>
       </div>
     </>
