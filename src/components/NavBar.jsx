@@ -13,7 +13,7 @@ const NavBar = () => {
     { title: "SERVICES", link: "/#services" },
     { title: "DOCTORS", link: "/doctors" },
     { title: "MY PORTAL", link: "https://avital-care.vercel.app/login" },
-    { title: "F.A.Q", link: "/#faq" },
+    { title: "FAQ", link: "/#faq" },
     { title: "CONTACT US", link: "/#contact" },
   ];
   return (

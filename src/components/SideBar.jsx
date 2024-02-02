@@ -9,9 +9,9 @@ const SideBar = ({ toggled, setToggle }) => {
     { title: "SERVICES", link: "/#services" },
     { title: "DOCTORS", link: "/doctors" },
     { title: "MY PORTAL", link: "https://avital-care.vercel.app/login" },
-    { title: "F.A.Q", link: "/#faq" },
+    { title: "FAQ", link: "/#faq" },
     { title: "CONTACT US", link: "/#contact" },
-    { title: "Sign Up", link: "https://avital-care.vercel.app/signup" },
+    { title: "SIGN UP", link: "https://avital-care.vercel.app/signup" },
   ];
 
   const sideBarRef = useRef(null);
@@ -62,7 +62,7 @@ const SideBar = ({ toggled, setToggle }) => {
                 {listItem.title}{" "}
               </Link>
             ) : listItem.title === "MY PORTAL" ||
-              listItem.title === "Sign Up" ? (
+              listItem.title === "SIGN UP" ? (
               <a onClick={() => setToggle(false)} href={listItem.link}>
                 {listItem.title}
               </a>
