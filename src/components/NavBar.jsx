@@ -20,7 +20,7 @@ const NavBar = () => {
     <>
       <div
         style={{ borderBottomColor: "#004680" }}
-        className="py-1 px-4 border-b-2 lg:border-b-0"
+        className="py-2 px-4 border-b-2 lg:border-b-0"
       >
         <div className="flex justify-between items-center flex-wrap">
           <Link to="/">
