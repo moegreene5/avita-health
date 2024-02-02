@@ -6,12 +6,12 @@ import { Link } from "react-router-dom";
 const SideBar = ({ toggled, setToggle }) => {
   const list = [
     { title: "HOME", link: "" },
-    { title: "Sign Up", link: "https://avital-care.vercel.app/signup" },
     { title: "SERVICES", link: "/#services" },
     { title: "DOCTORS", link: "/doctors" },
     { title: "MY PORTAL", link: "https://avital-care.vercel.app/login" },
     { title: "F.A.Q", link: "/#faq" },
     { title: "CONTACT US", link: "/#contact" },
+    { title: "Sign Up", link: "https://avital-care.vercel.app/signup" },
   ];
 
   const sideBarRef = useRef(null);
