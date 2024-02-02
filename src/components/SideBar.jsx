@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const SideBar = ({ toggled, setToggle }) => {
   const list = [
     { title: "HOME", link: "" },
+    { title: "Sign Up", link: "https://avital-care.vercel.app/signup" },
     { title: "SERVICES", link: "/#services" },
     { title: "DOCTORS", link: "/doctors" },
     { title: "MY PORTAL", link: "https://avital-care.vercel.app/login" },
@@ -60,7 +61,8 @@ const SideBar = ({ toggled, setToggle }) => {
               <Link onClick={() => setToggle(false)} to={listItem.link}>
                 {listItem.title}{" "}
               </Link>
-            ) : listItem.title === "MY PORTAL" ? (
+            ) : listItem.title === "MY PORTAL" ||
+              listItem.title === "Sign Up" ? (
               <a onClick={() => setToggle(false)} href={listItem.link}>
                 {listItem.title}
               </a>
@@ -76,9 +78,6 @@ const SideBar = ({ toggled, setToggle }) => {
             )}
           </li>
         ))}
-        <li>
-          <a href="https://avital-care.vercel.app/signup">Sign Up</a>
-        </li>
       </ul>
     </div>
   );
