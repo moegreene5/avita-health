@@ -38,8 +38,8 @@ const NavBar = () => {
               </button>
             </div>
             <button onClick={() => setToggle(true)}>
-              <span className="text-3xl text-blue-900 md:hidden">
-                <AiOutlineMenu />
+              <span className="text-3x font-bold md:hidden">
+                <AiOutlineMenu size="2rem" color="#004680" />
               </span>
             </button>
           </div>

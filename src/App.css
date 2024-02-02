@@ -261,7 +261,7 @@
 }
 
 .collapsible-section.open .toggle-symbol {
-  transform: rotate(0deg);
+  transform: rotate(180deg);
 }
 
 .collapsible-content {
@@ -273,4 +273,15 @@
 .content-inner {
   padding: 15px;
   background-color: #fff;
+}
+
+.carousel-container {
+  max-width: 85vw;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 600px) {
+  .carousel-container {
+    max-width: 90vw;
+  }
 }

@@ -42,7 +42,6 @@ const CarouselComponent = () => {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          arrows: false,
         },
       },
     ],
@@ -93,7 +92,7 @@ const CarouselComponent = () => {
 
         {/* CarouselComponent */}
 
-        <div className="" style={{ maxWidth: "90vw", margin: "0 auto" }}>
+        <div className="carousel-container">
           <Slider {...settings}>
             {items.map((item, index) => (
               <Card key={index} image={item.image} heading={item.heading} />
