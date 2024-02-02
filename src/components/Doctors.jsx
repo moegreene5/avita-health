@@ -4,6 +4,7 @@ import { FaChevronDown } from "react-icons/fa";
 
 const Doctors = () => {
   const [visible, setVisible] = useState(false);
+  const [dropDown, setDropDown] = useState(false);
   const [searchText, setSearchText] = useState("");
 
   const nameRef = useRef(null);
@@ -73,6 +74,25 @@ const Doctors = () => {
     },
   ];
 
+  const specialities = [
+    "surgeon",
+    "dentist",
+    "psr",
+    "psychologist",
+    "psychologist",
+    "psychologist",
+    "psychologist",
+    "psychologist",
+    "psychologist",
+    "psychologist",
+    "psychologist",
+    "psychologist",
+    "psychologist",
+    "psychologist",
+    "psychologist",
+    "psychologist",
+  ];
+
   return (
     <>
       <div className="text-center bg-slate-300">
@@ -101,13 +121,30 @@ const Doctors = () => {
             type="text"
             ref={nameRef}
           />
-          <button
-            type="button"
-            className=" bg-white m-4 p-2 pr-12 outline-none border-2 border-gray-400 text-gray-400 relative"
-          >
-            Filter by Service
-            <FaChevronDown className="absolute top-1/2 right-2 transform -translate-y-1/2" />
-          </button>
+          <span className="relative inline-block">
+            <button
+              onClick={() => setDropDown(!dropDown)}
+              type="button"
+              className=" bg-white m-4 p-2 pr-12 outline-none border-2 border-gray-400 text-gray-400 relative"
+            >
+              Filter by Service
+              {dropDown ? (
+                <FaChevronDown className="absolute top-1/2 right-2 transform -translate-y-1/2" />
+              ) : (
+                <FaChevronRight className="absolute top-1/2 right-2 transform -translate-y-1/2" />
+              )}
+            </button>
+            {/* {dropDown && (
+              <div className="p-6 pt-1 absolute top-full bg-white max-h-72 overflow-y-scroll z-50 text-base">
+                {specialities.map((specialty, index) => (
+                  <h3 key={index}>
+                    <input type="checkbox" className="mr-1 my-3" />
+                    {specialty}
+                  </h3>
+                ))}
+              </div>
+            )} */}
+          </span>
 
           <button type="reset" className="p-2 px-4 bg-gray-500 text-white m-4">
             Clear Filter

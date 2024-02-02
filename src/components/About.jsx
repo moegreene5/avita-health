@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div className="p-4 text-center mb-8">
+    <div className="p-4 text-center mb-8 textgr">
       <h1
         style={{ color: "#004680" }}
         className="font-bold text-2xl md:text-3xl lg:text-5xl mb-4"

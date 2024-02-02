@@ -2,12 +2,12 @@ import { GrNext, GrPrevious } from "react-icons/gr";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import gathering from "../assets/gathering.jpeg";
-import hospital2 from "../assets/hospital4.jpg";
-import patientCare from "../assets/patientCare.jpg";
+import patient1 from "../assets/patient1.webp";
+import patient2 from "../assets/patient2.webp";
+import patient3 from "../assets/patient3.webp";
+import patient4 from "../assets/patient4.webp";
 import people from "../assets/people.jpeg";
 import stethescope from "../assets/pinkStetescope.jpeg";
-import telehealth from "../assets/telehealth.jpg";
 import Card from "./Card";
 
 const CarouselComponent = () => {
@@ -55,27 +55,27 @@ const CarouselComponent = () => {
         "The Unveiling: A Tapestry of Compassion Picture a tapestry woven with threads of compassion and resilience. As the event unfolds, join us in unraveling the stories of survivors, the journeys of warriors, and the triumphs over adversity. Avita Health System is not just hosting an event; we are crafting an immersive experience that transforms statistics into stories and pink ribbons into beacons of hope.",
     },
     {
+      image: patient1,
+      heading:
+        " Join us for an enlightening medical seminar at a church near you, where leading experts will share insights on the latest healthcare advancements, empowering you with knowledge for a healthier tomorrow. Explore the intersection of faith and well-being as we come together for an informative and inspiring event.",
+    },
+    {
+      image: patient2,
+      heading:
+        "The Journey: Navigating the Path to Wellness In this narrative, you are not a passive observer; you are a participant in a collective journey. Avita Health invites you to explore the intricacies of breast health through informative sessions, interactive workshops, and free consultations. Our goal is not just awareness it's about fostering a proactive approach to health and inspiring communities to prioritize well-being.",
+    },
+    {
       image: stethescope,
       heading:
         "🌸Unveiling Hope: A Future Without Breast Cancer 🌸Welcome to a world where hope blooms and communities unite for a future free from the shadows of breast cancer. Avita Health System is thrilled to announce an upcoming event that transcends awareness – it's a celebration of strength, unity, and the promise of a brighter tomorrow.",
     },
     {
-      image: gathering,
+      image: patient4,
       heading:
-        " Join us for an enlightening medical seminar at a church near you, where leading experts will share insights on the latest healthcare advancements, empowering you with knowledge for a healthier tomorrow. Explore the intersection of faith and well-being as we come together for an informative and inspiring event.",
+        "Embark on a journey with Avita Health as we weave a story of partnership and purpose. Imagine a community coming together, where Avita Health collaborates with humanitarian organizations like Rotary Clubs. In this upcoming event, we're not just talking about health – we're living it.",
     },
     {
-      image: patientCare,
-      heading:
-        "The Journey: Navigating the Path to Wellness In this narrative, you are not a passive observer; you are a participant in a collective journey. Avita Health invites you to explore the intricacies of breast health through informative sessions, interactive workshops, and free consultations. Our goal is not just awareness it's about fostering a proactive approach to health and inspiring communities to prioritize well-being.",
-    },
-    {
-      image: hospital2,
-      heading:
-        "The Unveiling: A Tapestry of Compassion Picture a tapestry woven with threads of compassion and resilience. As the event unfolds, join us in unraveling the stories of survivors, the journeys of warriors, and the triumphs over adversity. Avita Health System is not just hosting an event; we are crafting an immersive experience that transforms statistics into stories and pink ribbons into beacons of hope.",
-    },
-    {
-      image: telehealth,
+      image: patient3,
       heading:
         "The Finale: A Symphony of Support As the event culminates, envision a symphony of support echoing through the community. Avita Health System is not merely an organizer – we are your partner in this shared endeavor. Together, let's compose a melody of encouragement, strength, and solidarity that resonates far beyond the event itself.",
     },
