@@ -1,4 +1,5 @@
 import { GrNext, GrPrevious } from "react-icons/gr";
+import { PiArrowFatLeftFill, PiArrowFatRightFill } from "react-icons/pi";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -22,8 +23,8 @@ const CarouselComponent = () => {
     autoplaySpeed: 4000,
     centerMode: true,
     arrows: true,
-    prevArrow: <GrPrevious color="#004680" fontSize="2rem" />,
-    nextArrow: <GrNext color="#004680" fontSize="2rem" />,
+    prevArrow: <PiArrowFatLeftFill color="#004680" size="2rem" />,
+    nextArrow: <PiArrowFatRightFill color="#004680" size="2rem" />,
 
     responsive: [
       {
