@@ -6,8 +6,8 @@ import patient1 from "../assets/patient1.webp";
 import patient2 from "../assets/patient2.webp";
 import patient3 from "../assets/patient3.webp";
 import patient4 from "../assets/patient4.webp";
+import patient6 from "../assets/patient6.webp";
 import people from "../assets/people.jpeg";
-import stethescope from "../assets/pinkStetescope.jpeg";
 import Card from "./Card";
 
 const CarouselComponent = () => {
@@ -65,12 +65,12 @@ const CarouselComponent = () => {
         "The Journey: Navigating the Path to Wellness In this narrative, you are not a passive observer; you are a participant in a collective journey. Avita Health invites you to explore the intricacies of breast health through informative sessions, interactive workshops, and free consultations. Our goal is not just awareness it's about fostering a proactive approach to health and inspiring communities to prioritize well-being.",
     },
     {
-      image: stethescope,
+      image: patient4,
       heading:
         "🌸Unveiling Hope: A Future Without Breast Cancer 🌸Welcome to a world where hope blooms and communities unite for a future free from the shadows of breast cancer. Avita Health System is thrilled to announce an upcoming event that transcends awareness – it's a celebration of strength, unity, and the promise of a brighter tomorrow.",
     },
     {
-      image: patient4,
+      image: patient6,
       heading:
         "Embark on a journey with Avita Health as we weave a story of partnership and purpose. Imagine a community coming together, where Avita Health collaborates with humanitarian organizations like Rotary Clubs. In this upcoming event, we're not just talking about health – we're living it.",
     },

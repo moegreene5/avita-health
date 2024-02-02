@@ -76,6 +76,9 @@ const SideBar = ({ toggled, setToggle }) => {
             )}
           </li>
         ))}
+        <li>
+          <a href="https://avital-care.vercel.app/signup">Sign Up</a>
+        </li>
       </ul>
     </div>
   );
