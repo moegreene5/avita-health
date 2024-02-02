@@ -1,4 +1,5 @@
 import bbanner from "../assets/bbanner.webp";
+import largeBanner from "../assets/banner2.webp";
 
 const HomeBanner = () => {
   return (
@@ -30,7 +31,7 @@ const HomeBanner = () => {
       <div className="hidden lg:block relative text-center text-white">
         {/* Image Container */}
         <div className="relative">
-          <img className="w-full h-96 object-cover" src={bbanner} alt="" />
+          <img className="object-cover w-full" src={largeBanner} alt="" />
 
           {/* Overlay Div */}
           <div
