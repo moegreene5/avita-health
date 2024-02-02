@@ -20,16 +20,16 @@ const NavBar = () => {
     <>
       <div
         style={{ borderBottomColor: "#004680" }}
-        className="py-3 px-4 border-b-2 lg:border-b-0"
+        className="py-1 px-4 border-b-2 lg:border-b-0"
       >
         <div className="flex justify-between items-center flex-wrap">
-          <a href="/">
+          <Link to="/">
             <img
               className="w-36 h-12 object-cover"
               src={avitaLogo}
               alt="website logo"
             />
-          </a>
+          </Link>
 
           <div className="flex justify-between items-center">
             <div className="mr-3 hidden md:block">
