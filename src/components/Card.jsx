@@ -15,7 +15,7 @@ const Card = ({ image, heading }) => {
         <div className="min-h-14 my-4 mx-2">
           <h3
             style={{ color: "#004680" }}
-            className="text-sm md:text-base lg:text-lg font-bold text-center"
+            className="text-base md:text-lg font-bold text-center"
           >
             {" "}
             {heading}
