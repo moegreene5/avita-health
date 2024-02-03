@@ -6,7 +6,7 @@ import Doctors from "./components/Doctors";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "",
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [

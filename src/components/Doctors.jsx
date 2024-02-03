@@ -1,11 +1,33 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
+import useDoctors from "../hooks/useDoctors";
+import axios from "axios";
 
 const Doctors = () => {
   const [visible, setVisible] = useState(false);
   const [dropDown, setDropDown] = useState(false);
   const [searchText, setSearchText] = useState("");
+
+  const { doctors } = useDoctors;
+
+  console.log(doctors);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get(
+        "https://avital-care.vercel.app/api/publicdoctors",
+        {
+          headers: {
+            apiKey: "moegreene51234",
+          },
+        }
+      );
+      return response;
+    };
+
+    fetchData();
+  }, []);
 
   const nameRef = useRef(null);
 
@@ -72,25 +94,6 @@ const Doctors = () => {
       img: "https://source.unsplash.com/collection/190727/800x600?12",
       profession: "Basketballer",
     },
-  ];
-
-  const specialities = [
-    "surgeon",
-    "dentist",
-    "psr",
-    "psychologist",
-    "psychologist",
-    "psychologist",
-    "psychologist",
-    "psychologist",
-    "psychologist",
-    "psychologist",
-    "psychologist",
-    "psychologist",
-    "psychologist",
-    "psychologist",
-    "psychologist",
-    "psychologist",
   ];
 
   return (

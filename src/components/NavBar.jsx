@@ -9,7 +9,7 @@ const NavBar = () => {
   const [toggled, setToggle] = useState(false);
 
   const list = [
-    { title: "HOME", link: "/" },
+    { title: "HOME", link: "" },
     { title: "SERVICES", link: "/#services" },
     { title: "DOCTORS", link: "/doctors" },
     { title: "MY PORTAL", link: "https://avital-care.vercel.app/login" },

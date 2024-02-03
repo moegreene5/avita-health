@@ -36,8 +36,8 @@ const SideBar = ({ toggled, setToggle }) => {
       style={{ zIndex: "99999999" }}
       className={`side-background fixed right-0 top-0 h-screen z-50 pl-4 pr-12 py-8 flex flex-col justify-start items-start md:hidden ${
         toggled
-          ? "transition-transform ease-in duration-300 transform translate-x-0"
-          : "transition-transform ease-out duration-300 transform translate-x-full"
+          ? "transition-transform ease-in duration-600 transform translate-x-0 !important"
+          : "transition-transform ease-out duration-600 transform translate-x-full !important "
       }`}
     >
       <button
@@ -47,7 +47,7 @@ const SideBar = ({ toggled, setToggle }) => {
         <IoMdExit />
       </button>
 
-      <ul className="w h-full">
+      <ul>
         {list.map((listItem, index) => (
           <li
             className={`${
@@ -57,12 +57,7 @@ const SideBar = ({ toggled, setToggle }) => {
             }`}
             key={index}
           >
-            {listItem.title === "DOCTORS" || listItem.title === "HOME" ? (
-              <Link onClick={() => setToggle(false)} to={listItem.link}>
-                {listItem.title}{" "}
-              </Link>
-            ) : listItem.title === "MY PORTAL" ||
-              listItem.title === "SIGN UP" ? (
+            {listItem.title === "MY PORTAL" || listItem.title === "SIGN UP" ? (
               <a onClick={() => setToggle(false)} href={listItem.link}>
                 {listItem.title}
               </a>

@@ -280,7 +280,13 @@
   margin: 0 auto;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 320px) {
+  .carousel-container {
+    max-width: 85vw;
+  }
+}
+
+@media screen and (min-width: 699px) {
   .carousel-container {
     max-width: 90vw;
   }

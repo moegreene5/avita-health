@@ -1,4 +1,4 @@
-import { GrNext, GrPrevious } from "react-icons/gr";
+// import { GrNext, GrPrevious } from "react-icons/gr";
 import { PiArrowFatLeftFill, PiArrowFatRightFill } from "react-icons/pi";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
@@ -40,7 +40,7 @@ const CarouselComponent = () => {
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 700,
         settings: {
           slidesToShow: 1,
         },
