@@ -9,29 +9,27 @@ const Doctors = () => {
   const [dropDown, setDropDown] = useState(false);
   const [searchText, setSearchText] = useState("");
 
-  const { doctors } = useDoctors;
+  // const { doctors } = useDoctors;
 
-  console.log(doctors);
+  // console.log(doctors);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get(
-        "https://avital-care.vercel.app/api/publicdoctors",
-        {
-          headers: {
-            apiKey: "moegreene51234",
-          },
-        }
-      );
-      return response;
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const response = await axios.get(
+  //       "https://avital-care.vercel.app/api/publicdoctors",
+  //       {
+  //         headers: {
+  //           apiKey: "moegreene51234",
+  //         },
+  //       }
+  //     );
+  //     return response;
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   const nameRef = useRef(null);
-
-  console.log(searchText);
 
   const items = [
     {
