@@ -78,7 +78,13 @@ const Footer = () => {
                 <ul className="footer-ul pl-0">
                   {item.li.map((link, index) => (
                     <li className="mb-1.5 pl-0" key={index}>
-                      <p className="hover:text-blue-200">{link}</p>
+                      {link.includes("@") ? (
+                        <a href={`mailto:${link}`}>{link}</a>
+                      ) : link.includes("0") ? (
+                        <a href={`tel:${link}`}>{link}</a>
+                      ) : (
+                        <p className="hover:text-blue-200">{link}</p>
+                      )}
                     </li>
                   ))}
                 </ul>
