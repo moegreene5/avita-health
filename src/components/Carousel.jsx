@@ -28,7 +28,7 @@ const CarouselComponent = () => {
 
     responsive: [
       {
-        breakpoint: 1500,
+        breakpoint: 1400,
         settings: {
           slidesToShow: 3,
         },
@@ -40,7 +40,7 @@ const CarouselComponent = () => {
         },
       },
       {
-        breakpoint: 700,
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
         },

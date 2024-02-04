@@ -1,97 +1,82 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
-import useDoctors from "../hooks/useDoctors";
-import axios from "axios";
+import Select from "react-select";
+import avita from "../assets/av4.png";
 
 const Doctors = () => {
   const [visible, setVisible] = useState(false);
-  const [dropDown, setDropDown] = useState(false);
   const [searchText, setSearchText] = useState("");
 
-  // const { doctors } = useDoctors;
-
-  // console.log(doctors);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const response = await axios.get(
-  //       "https://avital-care.vercel.app/api/publicdoctors",
-  //       {
-  //         headers: {
-  //           apiKey: "moegreene51234",
-  //         },
-  //       }
-  //     );
-  //     return response;
-  //   };
-
-  //   fetchData();
-  // }, []);
-
   const nameRef = useRef(null);
+
+  const customStyles = {
+    control: (provided) => ({
+      ...provided,
+      width: 200,
+    }),
+    menu: (provided) => ({
+      ...provided,
+      width: 200,
+    }),
+  };
 
   const items = [
     {
       name: "Agbasi Ifeanyi",
       img: "https://source.unsplash.com/collection/190727/800x600?1",
       profession: "Developer",
+      number: "08105833171",
+      email: "agbasiifeanyi@gmail.com",
     },
     {
-      name: "Kevin Durant",
-      img: "https://source.unsplash.com/collection/190727/800x600?2",
-      profession: "Basketballer",
+      name: "Agbasi Ifeanyi",
+      img: "https://source.unsplash.com/collection/190727/800x600?1",
+      profession: "Developer",
+      number: "08105833171",
+      email: "agbasiifeanyi@gmail.com",
     },
     {
-      name: "Jayson Tatum",
-      img: "https://source.unsplash.com/collection/190727/800x600?3",
-      profession: "Basketballer",
+      name: "Agbasi Ifeanyi",
+      img: "https://source.unsplash.com/collection/190727/800x600?1",
+      profession: "Developer",
+      number: "08105833171",
+      email: "agbasiifeanyi@gmail.com",
     },
     {
-      name: "Luka Donic",
-      img: "https://source.unsplash.com/collection/190727/800x600?4",
-      profession: "Basketballer",
+      name: "Agbasi Ifeanyi",
+      img: "https://source.unsplash.com/collection/190727/800x600?1",
+      profession: "Developer",
+      number: "08105833171",
+      email: "agbasiifeanyi@gmail.com",
     },
     {
-      name: "Jaylen Brown",
-      img: "https://source.unsplash.com/collection/190727/800x600?5",
-      profession: "Basketballer",
+      name: "Agbasi Ifeanyi",
+      img: "https://source.unsplash.com/collection/190727/800x600?1",
+      profession: "Developer",
+      number: "08105833171",
+      email: "agbasiifeanyi@gmail.com",
     },
     {
-      name: "Anthony Edwards",
-      img: "https://source.unsplash.com/collection/190727/800x600?6",
-      profession: "Basketballer",
+      name: "Agbasi Ifeanyi",
+      img: "https://source.unsplash.com/collection/190727/800x600?1",
+      profession: "Developer",
+      number: "08105833171",
+      email: "agbasiifeanyi@gmail.com",
     },
     {
-      name: "Kyrie Irving",
-      img: "https://source.unsplash.com/collection/190727/800x600?7",
-      profession: "Basketballer",
+      name: "Agbasi Ifeanyi",
+      img: "https://source.unsplash.com/collection/190727/800x600?1",
+      profession: "Developer",
+      number: "08105833171",
+      email: "agbasiifeanyi@gmail.com",
     },
-    {
-      name: "Mo Bamba",
-      img: "https://source.unsplash.com/collection/190727/800x600?8",
-      profession: "Basketballer",
-    },
-    {
-      name: "Scottie Barnes",
-      img: "https://source.unsplash.com/collection/190727/800x600?9",
-      profession: "Basketballer",
-    },
-    {
-      name: "Tyrese Maxey",
-      img: "https://source.unsplash.com/collection/190727/800x600?10",
-      profession: "Basketballer",
-    },
-    {
-      name: "Trae Young",
-      img: "https://source.unsplash.com/collection/190727/800x600?11",
-      profession: "Basketballer",
-    },
-    {
-      name: "Joel Embiid",
-      img: "https://source.unsplash.com/collection/190727/800x600?12",
-      profession: "Basketballer",
-    },
+  ];
+
+  const options = [
+    { value: "option1", label: "Option 1" },
+    { value: "option2", label: "Option 2" },
+    { value: "option3", label: "Option 3" },
   ];
 
   return (
@@ -110,9 +95,9 @@ const Doctors = () => {
         </div>
         <form
           action=""
-          className={`lg:block ${
+          className={`lg:flex items-center justify-center flex-wrap ${
             visible
-              ? "block transition-opacity duration-500 ease-in"
+              ? "flex transition-opacity duration-500 ease-in"
               : "hidden transition-opacity duration-500 ease-out"
           }`}
         >
@@ -122,31 +107,13 @@ const Doctors = () => {
             type="text"
             ref={nameRef}
           />
-          <span className="relative inline-block">
-            <button
-              onClick={() => setDropDown(!dropDown)}
-              type="button"
-              className=" bg-white m-4 p-2 pr-12 outline-none border-2 border-gray-400 text-gray-400 relative"
-            >
-              Filter by Service
-              {dropDown ? (
-                <FaChevronDown className="absolute top-1/2 right-2 transform -translate-y-1/2" />
-              ) : (
-                <FaChevronRight className="absolute top-1/2 right-2 transform -translate-y-1/2" />
-              )}
-            </button>
-            {/* {dropDown && (
-              <div className="p-6 pt-1 absolute top-full bg-white max-h-72 overflow-y-scroll z-50 text-base">
-                {specialities.map((specialty, index) => (
-                  <h3 key={index}>
-                    <input type="checkbox" className="mr-1 my-3" />
-                    {specialty}
-                  </h3>
-                ))}
-              </div>
-            )} */}
-          </span>
 
+          <Select
+            options={options}
+            isSearchable={true}
+            placeholder="Filter by Service"
+            styles={customStyles}
+          />
           <button type="reset" className="p-2 px-4 bg-gray-500 text-white m-4">
             Clear Filter
           </button>
@@ -168,27 +135,39 @@ const Doctors = () => {
         <h1 className="text-center mb-8 text-5xl" style={{ color: "#004680" }}>
           Find a Doctor
         </h1>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-12">
-          {/* {items.map((item, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {items.map((item, index) => (
             <div className="justify-self-center" key={index}>
-              <img className="object-cover h-72" src={item.img} alt="" />
+              <img
+                className="object-cover h-72 rounded-2xl overflow-hidden"
+                src={item.img}
+                alt=""
+              />
               <div
                 style={{ color: "#004680" }}
-                className="p-4 bg-slate-100 text-center"
+                className="p-4 bg-white text-left border-2 border-slate-400 relative"
               >
-                <h3 className="text-3xl">{item.name}</h3>
-                <p className="text-sm md:text-lg lg:text-2xl">
+                <img
+                  className="h-16 w-16 object-cover absolute bottom-2 right-2"
+                  src={avita}
+                  alt=""
+                />
+                <h3 className="text-lg md:text-2xl lg:text-3xl font-bold">
+                  {item.name}
+                </h3>
+                <p className="text-sm md:text-base lg:text-lg text-gray-600">
                   {item.profession}
                 </p>
+                <p className="text-sm md:text-base lg:text-lg">{item.number}</p>
               </div>
             </div>
-          ))} */}
-          {items.map((item) => (
+          ))}
+          {/* {items.map((item) => (
             <div
               key={item.name}
               className="bg-gradient-to-r from-blue-300 to-blue-200 animate-pulse shadow-lg p-4 rounded-md h-80"
             ></div>
-          ))}
+          ))} */}
         </div>
       </div>
     </>

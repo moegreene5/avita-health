@@ -17,7 +17,7 @@ const WaitTimes = () => {
         }}
       >
         <div className="flex justify-center items-center">
-          <h2 className="text-white text-center sm:text-lg md:text-3xl lg:text-5xl">
+          <h2 className="text-white text-center sm:text-2xl md:text-3xl lg:text-5xl">
             Services
           </h2>
           <span
