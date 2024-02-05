@@ -134,11 +134,11 @@ const Doctors = () => {
           {/* doctor cards */}
           {filteredDoctors?.map((doctor, index) => (
             <div
-              className="justify-self-center shadow-lg rounded-sm overflow-hidden"
+              className="justify-self-center shadow-lg rounded-sm overflow-hidden w-full"
               key={index}
             >
               <img
-                className="object-cover h-72"
+                className="object-cover h-72 w-full"
                 src={doctor.img ? doctor.img : doctorPic}
                 alt=""
               />
