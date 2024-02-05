@@ -6,7 +6,8 @@ const apiClient = new ApiClient('/publicspecialties')
 
 const useSpecialties = () => useQuery({
     queryKey: ['specialties'],
-    queryFn: () => apiClient.getAll()
+    queryFn: () => apiClient.getAll(),
+    staleTime: 60 * 1000 * 60 * 24  // 1d
 })
 
 export default useSpecialties

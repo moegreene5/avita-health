@@ -1,11 +1,10 @@
 import { useRef, useState } from "react";
-import { FaChevronRight } from "react-icons/fa";
-import { FaChevronDown } from "react-icons/fa";
+import { FaChevronDown, FaChevronRight } from "react-icons/fa";
 import Select from "react-select";
 import avita from "../assets/av4.png";
+import doctorPic from "../assets/telehealth.jpg";
 import useDoctors from "../hooks/useDoctors";
 import useSpecialties from "../hooks/useSpecialties";
-import doctorPic from "../assets/telehealth.jpg";
 
 const Doctors = () => {
   const [visible, setVisible] = useState(false);
@@ -36,14 +35,19 @@ const Doctors = () => {
 
   let filteredDoctors = doctors?.data.data;
 
-  if (searchText)
-    filteredDoctors = doctors?.data.data.filter((doctor) =>
-      doctor.name.toLowerCase().startsWith(searchText.toLowerCase())
-    );
-  else if (selectedSpecialty)
-    filteredDoctors = doctors.data.data.filter(
-      (doctor) => doctor.specialty.name === selectedSpecialty.value
-    );
+  if (selectedSpecialty || searchText) {
+    const sanitizedSearchText = searchText?.replace(/\s/g, ""); // Optional chaining to handle null or undefined searchText
+    const regex = new RegExp(sanitizedSearchText, "i");
+
+    filteredDoctors = doctors?.data.data.filter((doctor) => {
+      const sanitizedDoctorName = doctor.name.replace(/\s/g, ""); // Remove white spaces from doctor's name
+      return (
+        (!selectedSpecialty ||
+          doctor.specialty.name === selectedSpecialty.value) &&
+        (!searchText || regex.test(sanitizedDoctorName))
+      );
+    });
+  }
 
   return (
     <>
@@ -116,13 +120,23 @@ const Doctors = () => {
             items.map((item, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-r from-blue-300 to-blue-200 animate-pulse shadow-lg p-4 rounded-md h-80"
-              ></div>
+                className="justify-self-center shadow-lg rounded-sm overflow-hidden w-full"
+              >
+                <div className="h-72 bg-gradient-to-r from-blue-300 to-blue-200 animate-pulse shadow-lg"></div>
+                <div className="p-4 bg-white text-left border-2 border-slate-400">
+                  <h3 className="text-lg md:text-2xl lg:text-3xl bg-gradient-to-r from-blue-300 to-blue-200 animate-pulse h-9"></h3>
+                  <p className="text-sm md:text-base lg:text-lg bg-gradient-to-r from-blue-300 to-blue-200 animate-pulse h-7"></p>
+                  <p className="text-sm md:text-base lg:text-lg bg-gradient-to-r from-blue-300 to-blue-200 animate-pulse h-7"></p>
+                </div>
+              </div>
             ))}
 
           {/* doctor cards */}
           {filteredDoctors?.map((doctor, index) => (
-            <div className="justify-self-center" key={index}>
+            <div
+              className="justify-self-center shadow-lg rounded-sm overflow-hidden"
+              key={index}
+            >
               <img
                 className="object-cover h-72"
                 src={doctor.img ? doctor.img : doctorPic}

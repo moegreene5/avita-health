@@ -6,7 +6,9 @@ const apiClient = new ApiClient('/publicdoctors')
 
 const useDoctors = () => useQuery({
     queryKey: ['doctors'],
-    queryFn: () => apiClient.getAll()
+    queryFn: () => apiClient.getAll(),
+    staleTime: 60 * 1000 * 60 * 24  // 1d
+
 })
 
 export default useDoctors
