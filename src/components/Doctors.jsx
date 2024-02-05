@@ -3,10 +3,17 @@ import { FaChevronRight } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
 import Select from "react-select";
 import avita from "../assets/av4.png";
+import useDoctors from "../hooks/useDoctors";
+import useSpecialties from "../hooks/useSpecialties";
+import doctorPic from "../assets/telehealth.jpg";
 
 const Doctors = () => {
   const [visible, setVisible] = useState(false);
   const [searchText, setSearchText] = useState("");
+  const [selectedSpecialty, setSelectedSpecialty] = useState(null);
+
+  const { data: doctors, isLoading } = useDoctors();
+  const { data: specialties } = useSpecialties();
 
   const nameRef = useRef(null);
 
@@ -21,63 +28,22 @@ const Doctors = () => {
     }),
   };
 
-  const items = [
-    {
-      name: "Agbasi Ifeanyi",
-      img: "https://source.unsplash.com/collection/190727/800x600?1",
-      profession: "Developer",
-      number: "08105833171",
-      email: "agbasiifeanyi@gmail.com",
-    },
-    {
-      name: "Agbasi Ifeanyi",
-      img: "https://source.unsplash.com/collection/190727/800x600?1",
-      profession: "Developer",
-      number: "08105833171",
-      email: "agbasiifeanyi@gmail.com",
-    },
-    {
-      name: "Agbasi Ifeanyi",
-      img: "https://source.unsplash.com/collection/190727/800x600?1",
-      profession: "Developer",
-      number: "08105833171",
-      email: "agbasiifeanyi@gmail.com",
-    },
-    {
-      name: "Agbasi Ifeanyi",
-      img: "https://source.unsplash.com/collection/190727/800x600?1",
-      profession: "Developer",
-      number: "08105833171",
-      email: "agbasiifeanyi@gmail.com",
-    },
-    {
-      name: "Agbasi Ifeanyi",
-      img: "https://source.unsplash.com/collection/190727/800x600?1",
-      profession: "Developer",
-      number: "08105833171",
-      email: "agbasiifeanyi@gmail.com",
-    },
-    {
-      name: "Agbasi Ifeanyi",
-      img: "https://source.unsplash.com/collection/190727/800x600?1",
-      profession: "Developer",
-      number: "08105833171",
-      email: "agbasiifeanyi@gmail.com",
-    },
-    {
-      name: "Agbasi Ifeanyi",
-      img: "https://source.unsplash.com/collection/190727/800x600?1",
-      profession: "Developer",
-      number: "08105833171",
-      email: "agbasiifeanyi@gmail.com",
-    },
-  ];
+  const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
-  const options = [
-    { value: "option1", label: "Option 1" },
-    { value: "option2", label: "Option 2" },
-    { value: "option3", label: "Option 3" },
-  ];
+  const handleSpecialtyChange = (selectedOption) => {
+    setSelectedSpecialty(selectedOption);
+  };
+
+  let filteredDoctors = doctors?.data.data;
+
+  if (searchText)
+    filteredDoctors = doctors?.data.data.filter((doctor) =>
+      doctor.name.toLowerCase().startsWith(searchText.toLowerCase())
+    );
+  else if (selectedSpecialty)
+    filteredDoctors = doctors.data.data.filter(
+      (doctor) => doctor.specialty.name === selectedSpecialty.value
+    );
 
   return (
     <>
@@ -109,12 +75,21 @@ const Doctors = () => {
           />
 
           <Select
-            options={options}
+            options={specialties?.data.data}
+            value={selectedSpecialty}
+            onChange={handleSpecialtyChange}
             isSearchable={true}
             placeholder="Filter by Service"
             styles={customStyles}
           />
-          <button type="reset" className="p-2 px-4 bg-gray-500 text-white m-4">
+          <button
+            onClick={() => {
+              setSearchText("");
+              setSelectedSpecialty(null);
+            }}
+            type="reset"
+            className="p-2 px-4 bg-gray-500 text-white m-4"
+          >
             Clear Filter
           </button>
           <button
@@ -136,11 +111,21 @@ const Doctors = () => {
           Find a Doctor
         </h1>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {items.map((item, index) => (
+          {/* loading skeleton */}
+          {isLoading &&
+            items.map((item, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-r from-blue-300 to-blue-200 animate-pulse shadow-lg p-4 rounded-md h-80"
+              ></div>
+            ))}
+
+          {/* doctor cards */}
+          {filteredDoctors?.map((doctor, index) => (
             <div className="justify-self-center" key={index}>
               <img
-                className="object-cover h-72 rounded-2xl overflow-hidden"
-                src={item.img}
+                className="object-cover h-72"
+                src={doctor.img ? doctor.img : doctorPic}
                 alt=""
               />
               <div
@@ -153,21 +138,17 @@ const Doctors = () => {
                   alt=""
                 />
                 <h3 className="text-lg md:text-2xl lg:text-3xl font-bold">
-                  {item.name}
+                  {doctor.name}
                 </h3>
                 <p className="text-sm md:text-base lg:text-lg text-gray-600">
-                  {item.profession}
+                  {doctor.specialty.name}
                 </p>
-                <p className="text-sm md:text-base lg:text-lg">{item.number}</p>
+                <p className="text-sm md:text-base lg:text-lg">
+                  {doctor.telephone}
+                </p>
               </div>
             </div>
           ))}
-          {/* {items.map((item) => (
-            <div
-              key={item.name}
-              className="bg-gradient-to-r from-blue-300 to-blue-200 animate-pulse shadow-lg p-4 rounded-md h-80"
-            ></div>
-          ))} */}
         </div>
       </div>
     </>
