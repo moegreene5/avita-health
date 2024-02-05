@@ -4,6 +4,7 @@ const axiosInstance = axios.create({
     baseURL: "https://avital-care.vercel.app/api",
     headers: {
         apikey: 'moegreene51234',
+
     },
 });
 
@@ -13,7 +14,7 @@ export default class ApiClient {
     }
 
     getAll = async () => {
-        return axiosInstance.get(this.endPoint).then((res) => res)
+        return axiosInstance.get(this.endPoint).then((res) => res.data)
     }
 }
 

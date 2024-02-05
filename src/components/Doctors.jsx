@@ -33,13 +33,13 @@ const Doctors = () => {
     setSelectedSpecialty(selectedOption);
   };
 
-  let filteredDoctors = doctors?.data.data;
+  let filteredDoctors = doctors?.data;
 
   if (selectedSpecialty || searchText) {
     const sanitizedSearchText = searchText?.replace(/\s/g, ""); // Optional chaining to handle null or undefined searchText
     const regex = new RegExp(sanitizedSearchText, "i");
 
-    filteredDoctors = doctors?.data.data.filter((doctor) => {
+    filteredDoctors = doctors.data.filter((doctor) => {
       const sanitizedDoctorName = doctor.name.replace(/\s/g, ""); // Remove white spaces from doctor's name
       return (
         (!selectedSpecialty ||
@@ -52,9 +52,10 @@ const Doctors = () => {
   return (
     <>
       <div className="text-center bg-slate-300">
+        {/* filter select only visible on mobile devices */}
         <div
           onClick={() => setVisible(!visible)}
-          className="lg:hidden bg-slate-600 text-white p-3 cursor-pointer relative"
+          className="md:hidden bg-slate-600 text-white p-3 cursor-pointer relative"
         >
           <h3>Filter</h3>
           {visible ? (
@@ -63,9 +64,11 @@ const Doctors = () => {
             <FaChevronRight className="absolute top-1/2 right-6 transform -translate-y-1/2" />
           )}
         </div>
+
+        {/* inputs */}
         <form
           action=""
-          className={`lg:flex items-center justify-center flex-wrap ${
+          className={`md:flex items-center justify-center flex-wrap ${
             visible
               ? "flex transition-opacity duration-500 ease-in"
               : "hidden transition-opacity duration-500 ease-out"
@@ -79,7 +82,7 @@ const Doctors = () => {
           />
 
           <Select
-            options={specialties?.data.data}
+            options={specialties?.data}
             value={selectedSpecialty}
             onChange={handleSpecialtyChange}
             isSearchable={true}
