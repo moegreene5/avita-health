@@ -52,7 +52,7 @@ const Doctors = () => {
   return (
     <>
       <div className="text-center bg-slate-300">
-        {/* filter select only visible on mobile devices */}
+        {/* filter toggle only visible on mobile devices */}
         <div
           onClick={() => setVisible(!visible)}
           className="md:hidden bg-slate-600 text-white p-3 cursor-pointer relative"
@@ -117,6 +117,18 @@ const Doctors = () => {
         <h1 className="text-center mb-8 text-5xl" style={{ color: "#004680" }}>
           Find a Doctor
         </h1>
+
+        {/* if there are no doctors for search */}
+        {(searchText || selectedSpecialty) && filteredDoctors?.length === 0 && (
+          <h2
+            className="text-center mt-4 text-2xl"
+            style={{ color: "#004680" }}
+          >
+            There are no Doctors for this Search.
+          </h2>
+        )}
+
+        {/* doctors grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* loading skeleton */}
           {isLoading &&
