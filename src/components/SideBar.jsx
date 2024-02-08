@@ -49,29 +49,17 @@ const SideBar = ({ toggled, setToggle }) => {
 
       <ul>
         {list.map((listItem, index) => (
-          <li
-            className={`${
-              index === list.length - 1
-                ? "text-white text-lg p-3 w-auto hover:bg-blue-900 hover:cursor-pointer transition-all"
-                : "text-white text-lg border-b-2 border-white p-3 w-auto hover:bg-blue-800 hover:cursor-pointer transition-all"
-            }`}
-            key={index}
-          >
-            {listItem.title === "MY PORTAL" || listItem.title === "SIGN UP" ? (
-              <a onClick={() => setToggle(false)} href={listItem.link}>
-                {listItem.title}
-              </a>
-            ) : (
-              <Link
-                onClick={() => {
-                  setToggle(false);
-                }}
-                to={listItem.link}
-              >
-                {listItem.title}
-              </Link>
-            )}
-          </li>
+          <Link onClick={() => setToggle(false)} key={index} to={listItem.link}>
+            <li
+              className={`${
+                index === list.length - 1
+                  ? "text-white text-lg p-3 w-auto hover:bg-blue-900 hover:cursor-pointer transition-all"
+                  : "text-white text-lg border-b-2 border-white p-3 w-auto hover:bg-blue-800 hover:cursor-pointer transition-all"
+              }`}
+            >
+              {listItem.title}
+            </li>
+          </Link>
         ))}
       </ul>
     </div>

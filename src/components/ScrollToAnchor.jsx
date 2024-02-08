@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 function ScrollToAnchor() {
+
   const location = useLocation();
   const navigate = useNavigate();
   const lastHash = useRef("");

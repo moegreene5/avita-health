@@ -49,22 +49,11 @@ const NavBar = () => {
       <div className="blue hidden md:block">
         <ul className="flex justify-center">
           {list.map((listItem, index) => (
-            <li
-              className="mx-3 p-3 text-base lg:text-lg text-white hover:text-blue-300 hover:cursor-pointer transition-all"
-              key={index}
-            >
-              {listItem.title === "DOCTORS" || listItem.title === "HOME" ? (
-                <Link onClick={() => setToggle(false)} to={listItem.link}>
-                  {listItem.title}{" "}
-                </Link>
-              ) : listItem.title === "MY PORTAL" ? (
-                <a onClick={() => setToggle(false)} href={listItem.link}>
-                  {listItem.title}
-                </a>
-              ) : (
-                <Link to={listItem.link}>{listItem.title}</Link>
-              )}
-            </li>
+            <Link key={index} to={listItem.link}>
+              <li className="mx-3 p-3 text-base lg:text-lg text-white hover:text-blue-300 hover:cursor-pointer transition-all">
+                {listItem.title}
+              </li>
+            </Link>
           ))}
         </ul>
       </div>
